@@ -12,9 +12,9 @@ In this section, the steps to compile WRF-Fire along with the required compilers
    :titlesonly:
    :maxdepth: 2
 
-   Mac
-   Ubuntu
    Linux
+   Ubuntu
+   Mac
    Windows
    singularity_container
    Idealized
