@@ -32,19 +32,19 @@ The contributing team from the University of Nevada, Reno includes:
 
 .. raw:: html
    
-   <p style="margin-left:2.5%;">- <a href="https://www.unr.edu/cee/people/hamed-ebrahimian" target="_blank">Hamed Ebrahimian</a>, Assistant Professor, Department of Civil and Environmental Engineering, University of Nevada, Reno <br>
+   <p style="margin-left:2.5%;">• <a href="https://www.unr.edu/cee/people/hamed-ebrahimian" target="_blank">Hamed Ebrahimian</a>, Assistant Professor, Department of Civil and Environmental Engineering, University of Nevada, Reno <br>
 
 .. raw:: html
 
-   <p style="margin-left:2.5%;">- Kasra Shamsaei, Ph.D. Student, Department of Civil and Environmental Engineering, University of Nevada, Reno <br>
+   <p style="margin-left:2.5%;">• Kasra Shamsaei, Ph.D. Student, Department of Civil and Environmental Engineering, University of Nevada, Reno <br>
 
 .. raw:: html
 
-   <p style="margin-left:2.5%;">- Honggang Wang, Postdoctoral Fellow, Department of Civil and Environmental Engineering, University of Nevada, Reno <br>
+   <p style="margin-left:2.5%;">• Honggang Wang, Postdoctoral Fellow, Department of Civil and Environmental Engineering, University of Nevada, Reno <br>
 
 .. raw:: html
 
-   <p style="margin-left:2.5%;">- Evan Chinn, B.Sc. Student, Department of Business, University of Nevada, Reno <br>
+   <p style="margin-left:2.5%;">• Evan Chinn, B.Sc. Student, Department of Business, University of Nevada, Reno <br>
 
 .. raw:: html
 
