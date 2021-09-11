@@ -4,7 +4,7 @@
 How to Run WRF-Fire in Idealized Case
 =====================================
 
-Linking the input files
+Linking the Input Files
 -----------------------
 The input files of the case should be linked before running the WRF-Fire model using soft links. Commands to soft link the input files are as follows:
 
@@ -35,7 +35,8 @@ The input files of the case should be linked before running the WRF-Fire model u
 Running WRF-Fire model
 In an idealized case, first, the initialization software should be run to generate the input files required by WRF-Fire model. After the input files are generated, the model can be run.
 
-**Running The Initialization Software**
+Running The Initialization Software
+-----------------------------------
 
 The following command can be used to run the initialization software, called “ideal.exe”:
 
@@ -55,7 +56,8 @@ If the initialization is successful, the last printed line in the terminal windo
 
    $ wrf: SUCCESS COMPLETE IDEAL INIT
 
-**Running WRF-Fire Model**
+Running WRF-Fire Model
+----------------------
 
 .. raw:: html
 
