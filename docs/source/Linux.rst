@@ -4,8 +4,7 @@
 How to Compile WRF-Fire on Linux
 ================================
 
-The steps provided on this page have been s
-uccessfully used to compile WRF-Fire with the following Operating System (OS) and compilers. Slight modifications may be needed for other  OS and compilers. 
+The steps provided on this page have been successfully used to compile WRF-Fire with the following Operating System (OS) and compilers. Slight modifications may be needed for other  OS and compilers. 
 
 .. raw:: html  
 
@@ -48,13 +47,11 @@ Gfortran and GCC compilers are highly recommended for beginners as they are free
 **For Ubuntu Users:** 
 Ubuntu comes with GCC installed, and only Gfortran must be installed manually. To install Gfortran, it is recommended to use Advanced Package Tool (apt-get) for simplicity. Gfortran can be installed on Ubuntu using the following command:
 
-This is a simple example:
-
 ::
    
     $ sudo apt-get install gfortran
 
-Testing the installed compilers
+Testing the Installed Compilers
 -------------------------------
 
 .. raw:: html
@@ -63,7 +60,7 @@ Testing the installed compilers
 
 -----------------
 
-Setting the required Environment Variables (EVs)
+Setting the Required Environment Variables (EVs)
 ------------------------------------------------
 
 Before setting up the required Environment Variables, a directory should be created to install the required libraries. Then, the following Environment Variables must be set in the Shell’s Initialization File:
@@ -97,11 +94,11 @@ Before setting up the required Environment Variables, a directory should be crea
    The ‘CC’, ‘CXX’, ‘FC’, and ‘F77’ Environment Variables are used to call the compilers, and therefore, they should be changed according to the compilers. For instance, the presented environment variables are for GFortran and GCC compilers in an Ubuntu system with only one version of the compilers installed.
 
 
-**For Ubuntu users:** The above-mentioned Environment Variables should be set in “.bash_profile” file since Ubuntu uses Bash shell. This file is located in the Home directory and can be accessed and edited using the following command: ::
+**For Ubuntu Users:** The above-mentioned Environment Variables should be set in “.bash_profile” file since Ubuntu uses Bash shell. This file is located in the Home directory and can be accessed and edited using the following command: ::
 
    nano ~/.bash_profile
 
-**Required libraries and How to Install Them**
+**Required Libraries and How to Install Them**
 
 WRF-Fire requires several libraries to compile and run successfully. The required libraries are: 
  
@@ -237,7 +234,7 @@ After installing mpich, the following Environment Variable should be set using t
 
 -------------------------
 
-**How to install Jasper, Zlib, and Libpng**
+**How to Install Jasper, Zlib, and Libpng**
 
 
 Jasper, Zlib, and Libpng are only required to compile and run WRF-Fire in real-data cases. 
@@ -292,7 +289,7 @@ Compiling WRF-Fire (Linux)
 First make sure that all the required compilers and libraries are working properly and the required Environment Variables are set. Then proceed with compiling WRF-Fire.
 WRF-Fire source files can be downloaded from its Github repository.
 
-**Creating the configuration file**
+**Creating the Configuration file**
 
 After extracting the source code, WRF configuration file should be created. In order to create the configuration file, the following command must be issued in the WRF’s source code directory:
 
@@ -343,7 +340,7 @@ WRF-Fire is compiled using 2 CPUs by default. To change the number of CPUs used 
 
    $ ./compile -j 9 em_fire  >& log.compile
 
-**How to check the compilation success**
+**How to Check the Compilation Success**
 
 After successful compilation, the following “.exe” files should be generated in “(path to WRF directory)/test/(case name)” directory, where “case name” is “em_fire” and “em_real” for idealized and real data cases, respectively:
 
