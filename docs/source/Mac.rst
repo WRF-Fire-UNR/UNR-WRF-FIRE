@@ -68,7 +68,7 @@ Steps to install the required compilers on Mac OS are as follows:
    $ brew install gcc-9
 
 
-Testing the compilers
+Testing the Compilers
 ---------------------
 .. raw:: html
    
@@ -76,7 +76,7 @@ Testing the compilers
 
 ----------------
 
-Setting required Environment Variables (EVs)
+Setting Required Environment Variables (EVs)
 --------------------------------------------
 Before setting up the required Environment Variables, a directory should be created to install the required libraries. Then, the following Environment Variables must be set in the Shell’s Initialization File::
 
@@ -105,7 +105,7 @@ Mac OS Catalina 10.15 and later uses ZSH shell as the default shell. In ZSH shel
    $ nano ~/.zprofile
 
 
-Required libraries and How to Install Them
+Required Libraries and How to Install Them
 ------------------------------------------
 
 WRF-Fire requires several libraries to compile and run successfully. The required libraries are:
@@ -357,7 +357,8 @@ Mac users should also modify the configuration file and set the correct compiler
 
 .. centered:: Correcting compilers calling command in “configure.wrf” file
 
-**Compiling WRF-Fire**
+Compiling WRF-Fire
+------------------
 
 After creating the configuration file, WRF-Fire can be compiled for idealized and real-data cases using the following commands:
 
@@ -382,7 +383,8 @@ WRF-Fire is compiled using 2 CPUs by default. To change the number of CPUs used 
 
    $ ./compile -j 9 em_fire  >& log.compile
 
-**How to check the compilation success**
+How to check the Compilation Success
+------------------------------------
 
 .. raw:: html
 
