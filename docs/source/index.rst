@@ -24,7 +24,7 @@ This Wiki aims to tutor WRF-Fire using a variety of examples with incrementally 
 
 Enjoy learning WRF-Fire!
 
-About us 
+About Us 
 --------
 This Wiki has been developed through collaboration between teams from the University of Nevada, Reno and University Corporation for Atmospheric Research (UCAR). The development of this wiki page has been sponsored by the `NSF LEAP-HI Grant #1953333 <https://www.nsf.gov/awardsearch/showAward?AWD_ID=1953333&HistoricalAwards=false>`_ and UCAR funding.
 
