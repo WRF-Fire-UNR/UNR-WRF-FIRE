@@ -258,7 +258,7 @@ Testing NetCDF and mpich Libraries
 
 --------------------
 
-How to install Jasper, Zlib, and Libpng
+How to Install Jasper, Zlib, and Libpng
 ---------------------------------------
 Jasper, Zlib, and Libpng are only required to compile and run WRF-Fire in real-data cases. 
 In order to install the above libraries, the following steps should be repeated for each library, and “library name” should be replaced by the name of the library being installed:
@@ -329,7 +329,7 @@ First make sure that all the required compilers and libraries are working proper
 
 ------------------
 
-| **Creating the configuration file**
+| **Creating the Configuration File**
 | After extracting the source code, WRF configuration file should be created. In order to create the configuration file, the following command must be issued in the WRF’s source code directory:
 
 ::
@@ -383,7 +383,7 @@ WRF-Fire is compiled using 2 CPUs by default. To change the number of CPUs used 
 
    $ ./compile -j 9 em_fire  >& log.compile
 
-How to check the Compilation Success
+How to Check the Compilation Success
 ------------------------------------
 
 .. raw:: html
