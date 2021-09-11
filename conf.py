@@ -19,7 +19,7 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'WRF-Fire Wiki'
-copyright = '2021'
+copyright = '2021 '
 author = 'University of Nevada, Reno'
 
 # The full version, including alpha/beta/rc tags
