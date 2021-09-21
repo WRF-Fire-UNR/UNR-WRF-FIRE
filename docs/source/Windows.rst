@@ -1,7 +1,7 @@
 .. _compileWin:
 
 ==================================
-How to compile WRF-Fire on Windows
+How to Compile WRF-Fire on Windows
 ==================================
 
 .. note::
