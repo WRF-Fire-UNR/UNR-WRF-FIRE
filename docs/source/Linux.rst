@@ -1,7 +1,7 @@
 .. _compileLin:
 
 ================================
-How to Compile WRF-Fire on Linux
+How to Compile WRF-Fire on Linux 
 ================================
 
 The steps provided on this page have been successfully used to compile WRF-Fire with the following Operating System (OS) and compilers. Slight modifications may be needed for other  OS and compilers. 
