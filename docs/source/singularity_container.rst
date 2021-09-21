@@ -1,6 +1,6 @@
 .. _sc:
 ===========================================================
-How to compile and run WRF-Fire using Singularity Container
+How to Compile and Run WRF-Fire Using Singularity Container
 ===========================================================
 
 .. note::
