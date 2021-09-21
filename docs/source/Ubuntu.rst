@@ -1,7 +1,7 @@
 .. _ubuntu:
 
 ==================================================================
-How to automatically compile WRF-Fire on Ubuntu using shell script
+How to Automatically Compile WRF-Fire on Ubuntu Using Shell Script
 ==================================================================
 
 .. note::
