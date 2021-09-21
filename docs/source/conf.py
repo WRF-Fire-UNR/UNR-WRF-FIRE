@@ -19,8 +19,8 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'WRF-Fire Wiki'
-copyright = '2021, Evan Chinn'
-author = 'Evan Chinn'
+copyright = '2021'
+author = ''
 
 # The full version, including alpha/beta/rc tags
 release = '2021'
