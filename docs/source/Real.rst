@@ -1,7 +1,7 @@
 .. _real:
 
 =================================
-How to run WRF-Fire in Real Cases
+How to Run WRF-Fire in Real Cases
 =================================
 
 .. note::
