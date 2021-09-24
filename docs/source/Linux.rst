@@ -26,7 +26,8 @@ Installing the Required Compilers and Libraries
 
 The first step in compiling WRF-Fire is to install the required compilers and libraries, and set up the environment properly.
 
-**Required Compilers and How to Install Them**
+Required Compilers and How to Install Them
+------------------------------------------
 
 Since WRF is mostly written in Fortran and partly in C++, both Fortran and C++ compilers are required. Available options include but are not limited to:
 
@@ -98,7 +99,8 @@ Before setting up the required Environment Variables, a directory should be crea
 
    nano ~/.bash_profile
 
-**Required Libraries and How to Install Them**
+Required Libraries and How to Install Them
+------------------------------------------
 
 WRF-Fire requires several libraries to compile and run successfully. The required libraries are: 
  
