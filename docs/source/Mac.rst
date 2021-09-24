@@ -355,8 +355,7 @@ Mac users should also modify the configuration file and set the correct compiler
 
 .. centered:: Correcting compilers calling command in “configure.wrf” file
 
-Compiling WRF-Fire
-------------------
+**Compiling WRF-Fire**
 
 After creating the configuration file, WRF-Fire can be compiled for idealized and real-data cases using the following commands:
 
