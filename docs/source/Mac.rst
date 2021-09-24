@@ -24,7 +24,8 @@ The first step in compiling WRF-Fire is to install the required compilers and li
 
 .. _runwrf:
 
-**Required Compilers and How to Install Them**
+Required Compilers and How to Install Them
+------------------------------------------
 
 Since WRF is mostly written in Fortran and partly in C++, both Fortran and C++ compilers are required. Available options include but are not limited to:
       
@@ -135,8 +136,7 @@ WRF-Fire requires several libraries to compile and run successfully. The require
 
    All the required libraries should be compiled using the same compiler. Compiling the libraries with different compilers will cause errors when compiling the WRF-Fire itself.
 
-How to Install NetCDF
----------------------
+**How to Install NetCDF**
 
 In order to compile WRF-Fire, first intall the NetCDF C and then the NetCDF Fortran libraries. 
 
@@ -198,8 +198,7 @@ After installing both NetCDF C and Fortran libraries, the following two Environm
    export NETCDF=$DIR/netcdf
 
 
-How to Install mpich
---------------------
+**How to Install mpich**
 
 The mpich library is required to compile and run WRF-Fire in parallel mode.
 Steps to install mpich library are as follows:
@@ -249,8 +248,7 @@ After installing mpich, the following Environment Variable should be set using t
 
    export PATH=$DIR/mpich/bin:$PATH
 
-Testing NetCDF and mpich Libraries
-----------------------------------
+**Testing NetCDF and mpich Libraries**
 
 .. raw:: html
 
@@ -258,8 +256,8 @@ Testing NetCDF and mpich Libraries
 
 --------------------
 
-How to Install Jasper, Zlib, and Libpng
----------------------------------------
+**How to Install Jasper, Zlib, and Libpng**
+
 Jasper, Zlib, and Libpng are only required to compile and run WRF-Fire in real-data cases. 
 In order to install the above libraries, the following steps should be repeated for each library, and “library name” should be replaced by the name of the library being installed:
 
@@ -383,8 +381,7 @@ WRF-Fire is compiled using 2 CPUs by default. To change the number of CPUs used 
 
    $ ./compile -j 9 em_fire  >& log.compile
 
-How to Check the Compilation Success
-------------------------------------
+**How to Check the Compilation Success**
 
 .. raw:: html
 
