@@ -56,7 +56,7 @@ After selecting the variable of interest, it will be shown in XY plane using col
 
 .. image:: images/v2.png
   :align: center
-  :width: 600
+  :width: 700
   :height: 400
   :alt: Alternative text
  
@@ -64,7 +64,7 @@ After selecting the variable of interest, it will be shown in XY plane using col
 
 .. image:: images/xy.png
   :align: center
-  :width: 500
+  :width: 700
   :height: 400
   :alt: Alternative text
  
@@ -74,7 +74,7 @@ Ncview can also plot 2D graphs of the selected variable. By left-clicking on a p
 
 .. image:: images/v1.png
   :align: center
-  :width: 600
+  :width: 700
   :height: 400
   :alt: Alternative text
 
