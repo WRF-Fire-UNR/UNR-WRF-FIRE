@@ -45,7 +45,7 @@ After the file is opened in Ncview, variables in the netCDF file can be viewed f
  
 .. image:: images/v3.png
   :align: center
-  :width: 600
+  :width: 700
   :height: 400
   :alt: Alternative text
 
@@ -64,7 +64,7 @@ After selecting the variable of interest, it will be shown in XY plane using col
 
 .. image:: images/xy.png
   :align: center
-  :width: 700
+  :width: 500
   :height: 400
   :alt: Alternative text
  
