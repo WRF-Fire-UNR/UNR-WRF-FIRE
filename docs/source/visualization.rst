@@ -46,6 +46,7 @@ After the file is opened in Ncview, variables in the netCDF file can be viewed f
 .. image:: images/v3.png
   :align: center
   :width: 800
+  :height: 800
   :alt: Alternative text
 
 .. centered:: Ncview window after opening a netCDF file
@@ -56,13 +57,15 @@ After selecting the variable of interest, it will be shown in XY plane using col
 .. image:: images/v2.png
   :align: center
   :width: 800
+  :height: 800
   :alt: Alternative text
  
 .. centered:: Ncview window after choosing a variable
 
 .. image:: images/xy.png
   :align: center
-  :width: 400
+  :width: 800
+  :height: 800
   :alt: Alternative text
  
 .. centered:: Output window of Ncview showing the value of the chosen variable in XY plane
@@ -72,6 +75,7 @@ Ncview can also plot 2D graphs of the selected variable. By left-clicking on a p
 .. image:: images/v1.png
   :align: center
   :width: 800
+  :height: 800
   :alt: Alternative text
 
 .. centered:: Sample of Ncview generated 2D graph
