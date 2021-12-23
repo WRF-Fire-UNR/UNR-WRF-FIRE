@@ -318,16 +318,16 @@ The first row of the “input_sounding” determines the surface characteristics
 
 .. image:: images/table1.png
   :align: center
-  :width: 700
-  :height: 400
+  :width: 600
+  :height: 75
   :alt: Alternative text
 
 The other rows of the “input_sounding” file specify the atmosphere state at different elevations. The structure of these rows is demonstrated in the following table.
 
 .. image:: images/table2.png
   :align: center
-  :width: 700
-  :height: 400
+  :width: 600
+  :height: 75
   :alt: Alternative text
 
 
@@ -376,14 +376,34 @@ This model results are purely Rothermel’s ROS theorem as the fire/atmosphere c
 
 Beginning of the simulation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. image:: images/beginning.png
+  :align: center
+  :width: 700
+  :height: 400
+  :alt: Alternative text
 
 10 min after start of the simulation 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. image:: images/10min.png
+  :align: center
+  :width: 700
+  :height: 400
+  :alt: Alternative text
 
 
 20 min after start of the simulation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. image:: images/20min.png
+  :align: center
+  :width: 700
+  :height: 400
+  :alt: Alternative text
 
 
 End of the simulation 
 ^^^^^^^^^^^^^^^^^^^^^
+.. image:: images/End.png
+  :align: center
+  :width: 700
+  :height: 400
+  :alt: Alternative text
