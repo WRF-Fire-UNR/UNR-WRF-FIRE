@@ -28,7 +28,7 @@ All the modelling parameters and assumptions for both WRF atmospheric model and 
 General Structure
 ^^^^^^^^^^^^^^^^^
 
-The general structure of the “namelist.input” file is as follows:
+The general structure of the “namelist.input” file is as follows.
 
 :: 
 
