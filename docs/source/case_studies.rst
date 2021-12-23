@@ -319,7 +319,7 @@ The first row of the “input_sounding” determines the surface characteristics
 .. image:: images/table1.png
   :align: center
   :width: 600
-  :height: 75
+  :height: 50
   :alt: Alternative text
 
 The other rows of the “input_sounding” file specify the atmosphere state at different elevations. The structure of these rows is demonstrated in the following table.
@@ -327,7 +327,7 @@ The other rows of the “input_sounding” file specify the atmosphere state at 
 .. image:: images/table2.png
   :align: center
   :width: 600
-  :height: 75
+  :height: 50
   :alt: Alternative text
 
 
