@@ -7,7 +7,7 @@ How to Automatically Compile WRF-Fire on Ubuntu Using Shell Script
 
 How to Install Required WRF-Fire Libraries Automatically on Ubuntu
 ------------------------------------------------------------------
-To successfully compile WRF-Fire, a number of libraries are required which their compilation can be difficult, time consuming, and confusing. The tutorial presented in this section along with the shell script presented can automize this process and easy. Before reading this section, you must read and follow “Required Compilers and How to Install Them” and “Testing the compilers” to install and test the required compilers.
+To successfully compile WRF-Fire, a number of libraries are required which their compilation can be difficult, time consuming, and confusing. The tutorial presented in this section along with the shell script presented can automize this process and easy. Before reading this section, you must read and follow “Required Compilers and How to Install Them” 'reqCompilers'_ and “Testing the compilers” to install and test the required compilers.
 
 Required Environment Variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
