@@ -123,4 +123,4 @@ The above shell script can be downloaded from here. Remember to change “DIR”
 
 .. centered:: “bash (script_name)”
 
-After the installation is finished, WRF-Fire can be compiled using the instruction provided in “Compiling WRF-Fire”. For creating the configuration file, option number 34 must be used when using the provided script to compile WRF-Fire using GNU compilers and in parallel using MPICH.
+After the installation is finished, WRF-Fire can be compiled using the instruction provided in :ref:`“Compiling WRF-Fire” <compileLin>`. For creating the configuration file, option number 34 must be used when using the provided script to compile WRF-Fire using GNU compilers and in parallel using MPICH.
