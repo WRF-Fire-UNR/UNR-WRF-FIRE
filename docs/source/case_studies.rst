@@ -17,7 +17,7 @@ Input_sounding: the atmospheric state including wind components along X and Y di
 
 .. Note:: the input files are text files which can be generated/edited using text editors such as Notepad and Sublime Text.
 
-* Hint: * the best way to generate the input files is to use sample inputs such as hill_simple and two_fires, and modify them as required.
+* Hint: the best way to generate the input files is to use sample inputs such as hill_simple and two_fires, and modify them as required.
 
 Namelist.input
 ^^^^^^^^^^^^^^
