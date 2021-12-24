@@ -26,6 +26,8 @@ Installing the Required Compilers and Libraries
 
 The first step in compiling WRF-Fire is to install the required compilers and libraries, and set up the environment properly.
 
+.. _reqCompilers:
+
 Required Compilers and How to Install Them
 ------------------------------------------
 
@@ -51,6 +53,8 @@ Ubuntu comes with GCC installed, and only Gfortran must be installed manually. T
 ::
    
     $ sudo apt-get install gfortran
+
+.. _testCompilers:
 
 Testing the Installed Compilers
 -------------------------------
