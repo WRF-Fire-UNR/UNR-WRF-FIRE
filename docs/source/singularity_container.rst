@@ -7,5 +7,3 @@ How to Compile and Run WRF-Fire Using Singularity Container
   
    This page is under construction
    
-   Test
-   
