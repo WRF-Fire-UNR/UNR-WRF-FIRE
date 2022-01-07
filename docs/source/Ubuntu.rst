@@ -38,7 +38,7 @@ The above-mentioned Environment Variables should be set in “.bash_profile” f
 
 After setting the required Environment Variables in the shell initialization file, the user must log out and log back in for the changes to take effect.
 
-.. Note:: The ‘CC’, ‘CXX’, ‘FC’, and ‘F77’ Environment Variables are used to call the compilers, and therefore, they should be changed according to the compilers. For instance, the presented environment variables are for GFortran and GCC compilers in an Ubuntu system with only one version of the compilers installed.
+.. Note:: The **‘CC’**, **‘CXX’**, **‘FC’**, and **‘F77’** Environment Variables are used to call the compilers, and therefore, they should be changed according to the compilers. For instance, the presented environment variables are for GFortran and GCC compilers in an Ubuntu system with only one version of the compilers installed.
 
 Shell Script to Install Required Libraries Automatically
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
