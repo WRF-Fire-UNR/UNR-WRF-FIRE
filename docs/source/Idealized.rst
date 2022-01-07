@@ -100,7 +100,7 @@ Plotting Fire Perimeter and Topography in Idealized Cases
 
 .. raw:: html 
   
-  <a href="https://numpy.org/" target="_blank">- Numpy</a> <br>
+  <br><a href="https://numpy.org/" target="_blank">- Numpy</a> <br>
   
 .. raw:: html 
   
