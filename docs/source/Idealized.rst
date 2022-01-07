@@ -100,14 +100,14 @@ This simple Python code plots snap snapshots of fire perimeter together with fil
 
 .. raw:: html 
   
-  <a href="https://numpy.org/" target="_blank">- Numpy</a> 
+  <a href="https://numpy.org/" target="_blank">- Numpy</a> <br>
   
 .. raw:: html 
   
-  <a href="https://matplotlib.org/" target="_blank">- NetCDF 4</a> 
+  <a href="https://matplotlib.org/" target="_blank">- NetCDF 4</a> <br>
 .. raw:: html 
   
-  <a href="https://matplotlib.org/" target="_blank">- Matplotlib</a> 
+  <a href="https://matplotlib.org/" target="_blank">- Matplotlib</a> <br>
 
 .. Note:: It is highly recommended to install all the libraries using Conda and conda-forge repository in a separate environment dedicated to WRF-Fire visualization to avoid any complications.
 
