@@ -96,7 +96,7 @@ Plotting Fire Perimeter and Topography in Idealized Cases
 
 .. raw:: html
 
-   This simple Python code plots snap snapshots of fire perimeter together with filled contours of    the domain topography. This code requires several Python libraries to ran successfully. The key library is WRF-Python which is described in: <a href="https://wrf-python.readthedocs.io/en/latest/" target="_blank">https://wrf-python.readthedocs.io/en/latest/</a> The installation guide of WRF-Python library is also available in the above link. Other required libraries are:
+   This simple Python code plots snap snapshots of fire perimeter together with filled contours of    the domain topography. This code requires several Python libraries to ran successfully. The key library is WRF-Python which is described in: <a href="https://wrf-python.readthedocs.io/en/latest/" target="_blank">https://wrf-python.readthedocs.io/en/latest/</a> The installation guide of WRF-Python library is also available in the above link. Other required libraries are: <br>
 
 .. raw:: html 
   
