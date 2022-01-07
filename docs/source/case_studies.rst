@@ -15,9 +15,9 @@ namelist.input: this file contains all of the WRF and WRF-Fire modelling paramet
 namelist.fire: fuel characteristics for different fuel types are defined in this file
 Input_sounding: the atmospheric state including wind components along X and Y direction, temperature, and water vapor mixing ratio along the vertical axis is specified in this input file
 
-.. Note:: the input files are text files which can be generated/edited using text editors such as Notepad and Sublime Text.
+.. Note:: The input files are text files which can be generated/edited using text editors such as Notepad and Sublime Text.
 
-**Hint:** the best way to generate the input files is to use sample inputs such as hill_simple and two_fires, and modify them as required.
+**Hint:** The best way to generate the input files is to use sample inputs such as hill_simple and two_fires, and modify them as required.
 
 Namelist.input
 ^^^^^^^^^^^^^^
