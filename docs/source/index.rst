@@ -76,6 +76,6 @@ For technical questions about WRF-Fire, please contact Dr. Branko Kosovic at bra
    input_files 
    case_studies
    visualization
-   idealized
+   Idealized
    faq
    forum
