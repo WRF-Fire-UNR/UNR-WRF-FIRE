@@ -9,7 +9,7 @@ Case Study 1: Idealized Flat-surface Uncoupled Model
 
 The first case study presented here is an idealized uncoupled model with flat surface based on the first model presented by Munoz-esparza et al. [1].  The wind field is assumed to be uniform and constant throughout the simulation, and all the atmospheric options are turned off in this case. The main goal of this case is to introduce the very basics of WRF and WRF-Fire, and how to create an idealized model. As an uncoupled model, this case only represents Rothermel’s [2]rate of spread (ROS) theorem.
 
-.. _c1IF
+.. _c1IF:
 
 Input Files
 ^^^^^^^^^^^
@@ -274,6 +274,8 @@ The “&fire” section of this case study is as follows.
     fire_boundary_guard=-1,
      /
 
+.. _c1NF:
+
 Namelist.fire
 ^^^^^^^^^^^^^
 
@@ -317,7 +319,9 @@ Fuel characteristics for each fuel type are defined in this section. In the foll
     se = 0.010, 0.010, 0.010, 0.010, 0.010, 0.010, 0.010, 0.010, 0.010, 0.010, 0.010, 0.010, 0.010, 0.010, 
     weight = 7.,  7.,  7., 180., 100., 100., 100., 900., 900., 900., 900., 900., 900., 7. ,
     /
-    
+
+.. _c1IS:
+
 Input_sounding
 ^^^^^^^^^^^^^^
 The initial atmosphere state of the WRF atmospheric model is defined by “input_sounding” file. Same as other input files, this is also text file which can be edited using any text editors. The structure of “input_sounding” is as follows.
@@ -666,7 +670,7 @@ The “&fire” section of this case study is as follows.
 Namelist.fire
 ^^^^^^^^^^^^^
 
-For this case, we use the namelist.fire of Case Study 1 which defines the fuel types based on Anderson’s 13 fuel model. The structure of “namelist.fire” fire and the options definition are provided in Case Study 1-namelist.fire. The namelist.fire of this case is as follows.
+For this case, we use the namelist.fire of Case Study 1 which defines the fuel types based on Anderson’s 13 fuel model. The structure of “namelist.fire” fire and the options definition are provided in :ref:`Case Study 1-namelist.fire<c1NF>`. The namelist.fire of this case is as follows.
 
 &fuel_scalars
 ^^^^^^^^^^^^^
@@ -712,7 +716,7 @@ For this case, we use the namelist.fire of Case Study 1 which defines the fuel t
 Input_sounding
 ^^^^^^^^^^^^^^
 
-The “input_sounding” file of this case is exactly the same as Case Study 1, and it is as follows. Fore information on “input_sounding” file structure and how to create it, refer to Case Study 1-input_sounding.
+The “input_sounding” file of this case is exactly the same as Case Study 1, and it is as follows. Fore information on “input_sounding” file structure and how to create it, refer to :ref:`Case Study 1-input_sounding<c1IS>`.
 
 ::
 
