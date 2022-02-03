@@ -8,6 +8,8 @@ Welcome to WRF-Fire Wiki Page!
 
 Introduction to WRF-Fire
 ------------------------
+
+`WRF-Fire <https://ral.ucar.edu/solutions/products/wrf-fire-wildland-fire-modeling>`_ is a two-way coupled atmosphere - wildland surface fire simulation platform within the Advanced Research WRF (ARW) dynamical core. WRF-Fire is a Numerical Weather Prediction model (WRF-ARW) coupled with a semi-empirical fire spread model based on the Rothermel’s semi-empirical Rate of Spread (ROS) model, meaning it does not simulate the physical processes governing the combustion process. As a two-way coupled wildland fire-atmosphere model, WRF-Fire takes into account the coupling between the fire and the atmosphere. The fire behavior model receives the wind components from the WRF atmospheric model to propagate the fire, and feeds the sensible and latent heat flux back to the atmospheric model to disturb the atmosphere state allowing the fire to “create its own weather”. This feature results in more realistic wildfire propagation compared to other operational wildland fire simulation platforms such as FARSITE, which is an uncoupled surface fire propagation platform based on the same Rothermel’s ROS model and Huygen’s wave principle. Moreover, as a result of using the computationally efficient semi-empirical ROS model as well as parallelization and proper scalability, WRF-Fire has been used for operational simulation of wildland fire.
  
 How to Use this Wiki and Where to Begin?
 ----------------------------------------
