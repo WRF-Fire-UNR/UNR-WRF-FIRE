@@ -1202,6 +1202,12 @@ In this scenario the wind speed is set to 2.5 ms \ :sup:`-1`\ to demonstrate the
   :height: 400
   :alt: Alternative text
   
+  .. image:: images/3-12.png
+  :align: center
+  :width: 700
+  :height: 400
+  :alt: Alternative text
+  
 References
 
 [1]	J. L. Coen, M. Cameron, J. Michalakes, E. G. Patton, P. J. Riggan, and K. M. Yedinak, “WRF-Fire: Coupled Weather–Wildland Fire Modeling with the Weather Research and Forecasting Model,” J. Appl. Meteorol. Climatol., vol. 52, no. 1, pp. 16–38, Jan. 2013, doi: 10.1175/JAMC-D-12-023.1.
