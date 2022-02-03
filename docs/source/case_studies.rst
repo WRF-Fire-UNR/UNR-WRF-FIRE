@@ -411,3 +411,14 @@ End of the simulation
   :width: 700
   :height: 400
   :alt: Alternative text
+  
+  
+References
+[1]	D. Muñoz-Esparza, B. Kosović, P. A. Jiménez, and J. L. Coen, “An Accurate Fire-Spread Algorithm in the Weather Research and Forecasting Model Using the Level-Set Method,” J. Adv. Model. Earth Syst., vol. 10, no. 4, pp. 908–926, Apr. 2018, doi: 10.1002/2017MS001108.
+
+[2]	R. C. Rothermel, A mathematical model for predicting fire spread in wildland fuels. Intermountain Forest & Range Experiment Station, Forest Service, U.S. Dept. of Agriculture, 1972.
+
+[3]	P. A. Jiménez, D. Muñoz-Esparza, and B. Kosović, “A High Resolution Coupled Fire–Atmosphere Forecasting System to Minimize the Impacts of Wildland Fires: Applications to the Chimney Tops II Wildland Event,” Atmos. 2018, Vol. 9, Page 197, vol. 9, no. 5, p. 197, May 2018, doi: 10.3390/ATMOS9050197.
+
+[4]	H. E. Anderson, Aids to determining fuel models for estimating fire behavior, vol. 122. US Department of Agriculture, Forest Service, Intermountain Forest and Range …, 1981.
+
