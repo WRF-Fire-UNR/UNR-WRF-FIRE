@@ -228,9 +228,9 @@ The above set of options are used to define fire ignition characteristics. WRF-F
 
 .. Note:: one of the known issues of WRF-Fire is that the fire does not ignite or ignites with a delay under special circumstances. In order to ensure fire ignition, the below equation must be satisfied:
 
-.. centered:: lfn\ :sub:`new`\ =d -min⁡(radius, ROS* (end\ :sub: `ts`\ - time\ :sub:`ign`\)<0
+.. centered:: lfn\ :sub:`new`\ =d -min⁡(radius, ROS* (end\ :sub:`ts`\ - time\ :sub:`ign`\)<0
 
-Where, d is the distance from ignition line to the nearest fire grid point, radius is ignition line radius, ROS is ignition rate of spread, and time\ :sub: `ign`\ and end \ :sub: `ts`\ is ignition start and end time, respectively. 
+Where, d is the distance from ignition line to the nearest fire grid point, radius is ignition line radius, ROS is ignition rate of spread, and time\ :sub:`ign`\ and end \ :sub:`ts`\ is ignition start and end time, respectively. 
 
 ::
 
