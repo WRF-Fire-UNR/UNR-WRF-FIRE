@@ -757,7 +757,7 @@ This model represents the effects of topography on the simulated wind field and 
 
 Beginning of the simulation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. image:: images/beg-2.png
+.. image:: images/beg-2z.png
   :align: center
   :width: 700
   :height: 400
@@ -765,7 +765,7 @@ Beginning of the simulation
   
 10 min after start of the simulation 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. image:: images/10-2.png
+.. image:: images/10-2z.png
   :align: center
   :width: 700
   :height: 400
@@ -773,7 +773,7 @@ Beginning of the simulation
   
 20 min after start of the simulation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. image:: images/20-2.png
+.. image:: images/20-2z.png
   :align: center
   :width: 700
   :height: 400
@@ -781,7 +781,7 @@ Beginning of the simulation
   
 40 min after start of the simulation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. image:: images/40-2.png
+.. image:: images/40-2z.png
   :align: center
   :width: 700
   :height: 400
@@ -789,7 +789,7 @@ Beginning of the simulation
   
 60 min after the start of simulation (end of the simulation)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. image:: images/end-2.png
+.. image:: images/end-2z.png
   :align: center
   :width: 700
   :height: 400
