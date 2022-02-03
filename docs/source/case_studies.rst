@@ -5,15 +5,18 @@ Case Studies
 Case Study 1: Idealized Flat-surface Uncoupled Model
 ----------------------------------------------------
 
-The first case study presented here is an idealized uncoupled model with flat surface. The wind field is assumed to be uniform and constant throughout the simulation, and all the atmospheric options are turned off in this case. The main goal of this case is to introduce the very basics of WRF and WRF-Fire, and how to create an idealized model. As an uncoupled model, this case only represents Rothermel’s rate of spread (ROS) theorem.
+The first case study presented here is an idealized uncoupled model with flat surface based on the first model presented by Munoz-esparza et al. [1].  The wind field is assumed to be uniform and constant throughout the simulation, and all the atmospheric options are turned off in this case. The main goal of this case is to introduce the very basics of WRF and WRF-Fire, and how to create an idealized model. As an uncoupled model, this case only represents Rothermel’s [2]rate of spread (ROS) theorem.
 
 Input Files
 ^^^^^^^^^^^
 
 In idealized cases, WRF-Fire requires three input files:
-namelist.input: this file contains all of the WRF and WRF-Fire modelling parameters and assumptions
-namelist.fire: fuel characteristics for different fuel types are defined in this file
-Input_sounding: the atmospheric state including wind components along X and Y direction, temperature, and water vapor mixing ratio along the vertical axis is specified in this input file
+
+1. namelist.input: this file contains all of the WRF and WRF-Fire modelling parameters and assumptions
+
+2. namelist.fire: fuel characteristics for different fuel types are defined in this file
+
+3. Input_sounding: the atmospheric state including wind components along X and Y direction, temperature, and water vapor mixing ratio along the vertical axis is specified in this input file
 
 .. Note:: The input files are text files which can be generated/edited using text editors such as Notepad and Sublime Text.
 
@@ -141,7 +144,7 @@ Physics section is used to activate physics schemes of WRF atmospheric model. Si
 &dynamics
 ^^^^^^^^^
 
-Dynamics section controls the parametrization schemes of WRF atmospheric model. This model uses WRF classic terrain-following vertical grid instead of a hybrid terrain-following and isobaric grid. This setup is indicated by turning off “hybrid_opt” option. The temporal descritization of the model is set to 3rd order Runge-Kutta scheme using “rk_ord” option which defines the order of the Runge-Kutta scheme. Diffusion options, “diff_opt” and “km_opt”, are turned off as we want to achieve a uniform constant wind field. Furthermore, surface drag and heat flux, “tke_drag_coefficient” and “tke_heat_flux”, are set to zero to create an idealized slip-free surface that will not affect the wind field. WRF atmospheric model of this case is ran non-hydrostatically by setting “non_hydrostatic” option to true. Horizontal momentum and scalar advection order is default 5, and vertical momentum and advection order is default 3. “time_step_sound” which defines the ratio of model time step to sounding time step is set to 20 in this case. Moisture and scalar advection, “moist_adv_opt” and “scalar_adv_opt”, are the default positive-definite scheme. The tracer option, “tracer_opt”, is set to 3 which is the value must be used for WRF-Fire simulations. This variable activates tracers in WRF atmospheric model to simulate smoke dispersion from fire. 
+Dynamics section controls the parametrization schemes of WRF atmospheric model. This model uses WRF classic terrain-following vertical grid instead of a hybrid terrain-following and isobaric grid. This setup is indicated by turning off “hybrid_opt” option. The temporal discretization of the model is set to 3rd order Runge-Kutta scheme using “rk_ord” option which defines the order of the Runge-Kutta scheme. Diffusion options, “diff_opt” and “km_opt”, are turned off as we want to achieve a uniform constant wind field. Furthermore, surface drag and heat flux, “tke_drag_coefficient” and “tke_heat_flux”, are set to zero to create an idealized slip-free surface that will not affect the wind field. WRF atmospheric model of this case is ran non-hydrostatically by setting “non_hydrostatic” option to true. Horizontal momentum and scalar advection order is default 5, and vertical momentum and advection order is default 3. “time_step_sound” which defines the ratio of model time step to sounding time step is set to 20 in this case. Moisture and scalar advection, “moist_adv_opt” and “scalar_adv_opt”, are the default positive-definite scheme. The tracer option, “tracer_opt”, is set to 3 which is the value must be used for WRF-Fire simulations. This variable activates tracers in WRF atmospheric model to simulate smoke dispersion from fire. 
 
 ::
 
@@ -214,10 +217,10 @@ To this point, all the previous sections were for setting up the WRF atmospheric
     fire_ignition_start_y1 = 2000., 
     fire_ignition_end_x1   = 1050., 
     fire_ignition_end_y1   = 3000.,
-    fire_ignition_ros1 =   0.5,
+    fire_ignition_ros1 =   110,
     fire_ignition_radius1  = 100, 
     fire_ignition_start_time1 = 10, 
-    fire_ignition_end_time1  = 310, 
+    fire_ignition_end_time1  = 11, 
     
 The above set of options are used to define fire ignition characteristics. WRF-Fire supports for up to 5 ignition lines, and the number of ignition lines is defined using “fire_num_ignition” which is 1 in this case. The next four options specify the X and Y coordinates of ignition line start and end points in meters from the lower left corner of the domain. “fire_ignition_ros1” and “fire_ignition_radius1” specify the ignition line ROS during the ignition and ignition line radius, width in other words, respectively. The last two options define the ignition start and end time from the beginning of the simulation in seconds.
 
@@ -225,9 +228,9 @@ The above set of options are used to define fire ignition characteristics. WRF-F
 
 .. Note:: one of the known issues of WRF-Fire is that the fire does not ignite or ignites with a delay under special circumstances. In order to ensure fire ignition, the below equation must be satisfied:
 
-.. centered:: lfnnew=d -min⁡(radius, ROS*endts -timeign<0
+.. centered:: lfn\ :sub:`new`\ =d -min⁡(radius, ROS* (end\ :sub: `ts\ - time\ :sub:`ign`\)<0
 
-Where, d is the distance from ignition line to the nearest fire grid point, radius is ignition line radius, ROS is ignition rate of spread, and timeign and endts is ignition start and end time, respectively. 
+Where, d is the distance from ignition line to the nearest fire grid point, radius is ignition line radius, ROS is ignition rate of spread, and time\ :sub: `ign`\ and end \ :sub: `ts`\ is ignition start and end time, respectively. 
 
 ::
 
@@ -239,7 +242,7 @@ Where, d is the distance from ignition line to the nearest fire grid point, radi
     fire_upwinding = 7,
     fire_boundary_guard=-1,
 
-The first option, “fire_print_msg”, controls the output from WRF-Fire written on the standard output. Option 1 used in this case prints the basic information of fire module such as mean and maximum wind speed, area burned, and model time. “fire_wind_height” controls the height at which the wind components are calculated for Rothermel’s ROS equation which is typically 6.5 meters same as in this case. As mentioned earlier, this case is an uncoupled model meaning that the fire/atmosphere interaction is turned off. This is defined by “fire_atm_feedback” which is set to zero. “fire_viscosity” and “fire_upwinding” determine the artificial viscosity required for the level-set equation and the spatial discretization of the level-set differential equation, respectively. “fire_upwinding” 7 is for WENO5 scheme. Lastly, the “fire_boundary_guard” specifies the number of cells from the domain boundary to stop the fire when it reaches that cell.
+The first option, “fire_print_msg”, controls the output from WRF-Fire written on the standard output. Option 1 used in this case prints the basic information of fire module such as mean and maximum wind speed, area burned, and model time. “fire_wind_height” controls the height at which the wind components are calculated for Rothermel’s ROS equation which is typically 6.5 meters same as in this case. As mentioned earlier, this case is an uncoupled model meaning that the fire/atmosphere interaction is turned off. This is defined by “fire_atm_feedback” which is set to zero. “fire_viscosity” and “fire_upwinding” determine the artificial viscosity required for the level-set equation and the spatial discretization of the level-set differential equation, respectively. “fire_upwinding” 7 is for WENO5 scheme [3]. Lastly, the “fire_boundary_guard” specifies the number of cells from the domain boundary to stop the fire when it reaches that cell.
 
 The “&fire” section of this case study is as follows.
 
@@ -254,10 +257,10 @@ The “&fire” section of this case study is as follows.
     fire_ignition_start_y1 = 2000., 
     fire_ignition_end_x1   = 1050., 
     fire_ignition_end_y1   = 3000.,
-    fire_ignition_ros1 =   0.5,
+    fire_ignition_ros1 =   110,
     fire_ignition_radius1  = 100, 
     fire_ignition_start_time1 = 10, 
-    fire_ignition_end_time1  = 310, 
+    fire_ignition_end_time1  = 11, 
     fire_print_msg     = 1,
     fire_wind_height = 6.5, 
     fire_topo_from_atm = 1,
@@ -270,7 +273,7 @@ The “&fire” section of this case study is as follows.
 Namelist.fire
 ^^^^^^^^^^^^^
 
-The fuel characteristics required in Rothermel’s equation, such as fuel load, fuel height, surface area to volume ratio, and fuel moisture content, are specified in this file. Sample “namelist.fire” files provided with WRF-Fire (located at test/em_fire directory) are based on Anderson’s 13 fuel category, and they can be modified using a text editor.  Moreover, the general structure of this file is same as the “namelist.input’ file. Available sections and options in this file are described in the rest of this section. 
+The fuel characteristics required in Rothermel’s equation, such as fuel load, fuel height, surface area to volume ratio, and fuel moisture content, are specified in this file. Sample “namelist.fire” files provided with WRF-Fire (located at test/em_fire directory) are based on Anderson’s 13 fuel category [4], and they can be modified using a text editor.  Moreover, the general structure of this file is same as the “namelist.input’ file. Available sections and options in this file are described in the rest of this section. 
 
 .. Note:: same as “namelist.input”, modifying one of the sample files is highly recommended. 
 
@@ -363,6 +366,7 @@ The complete “input_sounding” used for this study is as follows.
     1900	309	0.0	5.0	0
     2000	310	0.0	5.0	0
     2100	311	0.0	5.0	0
+    
 In this case study, the surface is assumed to be at 1,000 pa pressure level, and water vapor mixing ratio is assumed to be zero. The wind speed is uniform 5 m s-1 along the X direction. The surface temperature is set to 305 K. The temperature is assumed to be constant 300 K till 1 km altitude, and it increases linearly to 311 K from 1 to 2.1 km.
 
 .. Note:: the elevations specified in “input_sounding” do not need to match the WRF vertical levels. WRF interpolates the parameters from “input_sounding to model levels.
@@ -371,7 +375,7 @@ Sample Output
 ^^^^^^^^^^^^^
 
 Sample outputs of this case study is shown in the below figures. These figures are generated using the in-house Python code to plot fire perimeter, topography, and wind field in idealized simulations. The mentioned Python code along with its description is available in this page.
-This model results are purely Rothermel’s ROS theorem as the fire/atmosphere coupling is turned off and the wind field is constant during the simulation. The “U” shape of the fire propagation, which is the well-known fire shape driven by wind, is clearly present in the results, and the fire is propagating along the wind direction indicating that the results are correct. Moreover, fire ROS is constant throughout the simulation, and it is equal to value resulted by Rothermel’s ROS equation for fuel type 1, short grass, under no topography and 5 ms-1 wind speed.
+This model results are purely Rothermel’s ROS theorem as the fire/atmosphere coupling is turned off and the wind field is constant during the simulation. The “U” shape of the fire propagation, which is the well-known fire shape driven by wind, is clearly present in the results, and the fire is propagating along the wind direction indicating that the results are correct. Moreover, fire ROS is constant throughout the simulation, and it is equal to value resulted by Rothermel’s ROS equation for fuel type 1, short grass, under no topography and 5 ms \ :sup: `-1`\ wind speed.
 
 
 Beginning of the simulation
