@@ -380,7 +380,7 @@ This model results are purely Rothermel’s ROS theorem as the fire/atmosphere c
 
 Beginning of the simulation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. image:: images/Beginning.png
+.. image:: images/Beginning .png
   :align: center
   :width: 700
   :height: 400
@@ -388,7 +388,7 @@ Beginning of the simulation
 
 10 min after start of the simulation 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. image:: images/10min.png
+.. image:: images/10min .png
   :align: center
   :width: 700
   :height: 400
@@ -397,7 +397,7 @@ Beginning of the simulation
 
 20 min after start of the simulation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. image:: images/20min.png
+.. image:: images/20min .png
   :align: center
   :width: 700
   :height: 400
@@ -406,7 +406,7 @@ Beginning of the simulation
 
 End of the simulation 
 ^^^^^^^^^^^^^^^^^^^^^
-.. image:: images/End.png
+.. image:: images/End .png
   :align: center
   :width: 700
   :height: 400
