@@ -91,6 +91,8 @@ In parallel runs, pairs of “rsl.out.*” and “rsl.error.*” files will be c
 
    wrf: SUCCESS COMPLETE WRF
    
+.. _python:
+   
 Plotting Fire Perimeter and Topography in Idealized Cases
 ---------------------------------------------------------
 
