@@ -10,7 +10,7 @@ How to Install Required WRF-Fire Libraries Automatically on Ubuntu
 To successfully compile WRF-Fire, a number of libraries are required which their compilation can be difficult, time consuming, and confusing. The tutorial presented in this section along with the shell script presented can automize this process and easy. Before reading this section, you must read and follow :ref:`“Required Compilers and How to Install Them” <reqCompilers>` and :ref:`"Testing the compilers" <testCompilers>` to install and test the required compilers.
 
 Required Environment Variables
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------
 
 Before moving to running the shell script that installs all the required libraries, the following environmental variables must be set in the Shell’s initialization file:
 
@@ -41,7 +41,7 @@ After setting the required Environment Variables in the shell initialization fil
 .. Note:: The **‘CC’**, **‘CXX’**, **‘FC’**, and **‘F77’** Environment Variables are used to call the compilers, and therefore, they should be changed according to the compilers. For instance, the presented environment variables are for GFortran and GCC compilers in an Ubuntu system with only one version of the compilers installed.
 
 Shell Script to Install Required Libraries Automatically
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------
 
 The shell scripted provided below will install the required libraries to compile WRF-Fire automatically on Ubuntu. This script is tested on Ubuntu 18.04, 20.04 LTS, and 20.04 Server.
 
