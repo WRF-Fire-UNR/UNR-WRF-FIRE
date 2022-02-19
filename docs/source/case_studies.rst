@@ -336,12 +336,21 @@ The first row of the “input_sounding” determines the surface characteristics
 
 The other rows of the “input_sounding” file specify the atmosphere state at different elevations. The structure of these rows is demonstrated in the following table.
 
-.. image:: images/table2.png
-  :align: center
-  :width: 600
-  :height: 50
-  :alt: Alternative text
+.. list-table:: 
+   :align: center
+   :widths: 20 20 20 20 20
+   :header-rows: 0
 
+   * - 10.0
+     - 300.0
+     - 0.0
+     - 5.0
+     - 0.0
+   * - Elevation (m)
+     - Temerature (K)
+     - Water vapor mixing ratio (kg kg\ :sup:`-1`\)
+     - Wind speed in X direction(m s\ :sup:`-1`\)
+     - Wind speed in Y direction(m s\ :sup:`-1`\)
 
 The complete “input_sounding” used for this study is as follows.
 
@@ -350,8 +359,8 @@ The complete “input_sounding” used for this study is as follows.
     1000	305	0.0
     1.0	300	0.0	5.0	0
     6.0	300	0.0	5.0	0
-    9.1	300	0.0        5.0	0
-    18.3	300	0.0        5.0	0
+    9.1	300	0.0  5.0	0
+    18.3	300	0.0  5.0	0
     18.35	300	0.0	5.0	0
     91.2	300	0.0	5.0	0
     100	300	0.0	5.0	0
