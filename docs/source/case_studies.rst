@@ -439,7 +439,7 @@ Case Study 2: Idealized Flat-surface Coupled Model with Idealized Ridge
 The second case study is same as the first case study except the model in now coupled and an idealized ridge is added to the model. The model is initialized with a uniform wind field, and all the atmospheric options are turned off in this case. The surface is assumed to be slip-free with zero heat fluxes, and therefore, the surface will not affect the simulated wind field. The main goal of this case is to introduce the coupling and idealized topography options within WRF-Fire. As a coupled model with a ridge, this case represents the effects of fire on the atmosphere (i.e., the simulated wind field), and the effects of topography on fire propagation process. Since this case is based on the :ref:`first case study<case1>`, it is highly recommended to read the first case study, and the options that are same as the first case will not be explained here. For the description of the required input files, refer to :ref:`Case Study 1-Input Files<c1IF>`.
 
 Namelist.input
-&&&&&&&&&&&&&&
+~~~~~~~~~~~~~~
 
 &time_control
 &&&&&&&&&&&&&
@@ -798,10 +798,10 @@ Case Study 3: Idealized Flat-surface Coupled Model Configured in Large Eddy Simu
 The third case study presented in herein dives deeper into the atmospheric options of WRF atmospheric simulation model. The case study presented herein replicates the model used by Coen et al. [1]. By configuring the model in LES mode, the model will resolve turbulent eddies and develop a well-mixed boundary layer. Therefore, the atmospheric domain of the case study will have turbulence in contrast to the previous case studies, which had uniform wind field. The model is initialized with a uniform wind field, and the atmospheric options are configured for LES simulation. The surface is assumed to be an idealized surface with constant heat flux and drag coefficient. More sophisticated representation of the surface will be presented in real data case study. The main goal of this case is to teach how to correctly setup WRF-Fire in LES mode in idealized cases and show the effects of LES in fire spread process. For the description of the required input files, refer to :ref:`Case Study 1-Input Files<c1IF>`. Moreover, studying Case Study 1 before moving to this case is highly recommended as the options described in Case Study 1 are not explained here.
 
 Namelist.input
-^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~
 
 &time_control
-^^^^^^^^^^^^^
+&&&&&&&&&&&&&
 
 The options and values used for this case study are same as the Case Study 1 and shown below.
 
@@ -837,7 +837,7 @@ The options and values used for this case study are same as the Case Study 1 and
 The simulation in this case study is run for 2 hours (see “start_hour” and “end_hour” options), and the output interval is set to 600 seconds (“history_interval_s), i.e., WRF-Fire will generate an output file each 10 minutes.
 
 &domains
-^^^^^^^^
+&&&&&&&&
 
 The domains setup of this case including domain size, time step, and fire domain setup is exactly the same as the Case Study 1. 
 
@@ -872,7 +872,7 @@ The domains setup of this case including domain size, time step, and fire domain
 The time step of this case study is set to 0.5 second (“time_step_fract_num” determines the time step nominator and “time_step_fract_den” determines the time step denominator). The model utilizes a single domain (“max_dom”) with grid size 40 m in both X and Y direction (“dx” and “dy”). The number of grid points in both X and Y direction is equal to 126 grid points (see “s_we” and “e_we” for X direction, and “s_sn” and “e_sn” for Y direction), which results in a 5 by 5 km domain. The fire grid is eight times finer than the atmospheric domain on both X and Y directions (“sr_x” and “sr_y”). Other domain setup options are the same as Case Study 1.
 
 &physics
-^^^^^^^^
+&&&&&&&&
 
 The physics options of this case study are as follows.
 
@@ -897,7 +897,7 @@ The physics options of this case study are as follows.
 Since the goal is to simulate an idealized surface in LES mode, the surface model (sf_sfclay_physics”) is turned on in this case study, and it is set to 1 which indicates Revised MM5 Similarity surface parametrization scheme. Other options for surface parametrization scheme are available at WRF’s User’s Guide Chapter 5. “sf_surface_physics” indicates the land-surface parametrization scheme which is used to parametrize the land features such as land cover (i.e., vegetation) In this case, however, we are not using this option, and we will define an idealized surface in the “&dynamics” section. “bl_pbl_physics” controls the Planetary Boundary Layer (PBL) parametrization which in this case is set to 0 indicating that no PBL scheme is used. This option must be set to 0 to configure the domain in LES mode. The other option turned on in this case study is “isfflx” which enables the heat and moisture fluxes from the surface. Other physics options are turned off.
 
 &dynamics
-^^^^^^^^^
+&&&&&&&&&
 
 Dynamics options is one of the key sections in configuring an idealized case in LES mode. The dynamics options of this case study are as follows.
 
@@ -930,7 +930,7 @@ Dynamics options is one of the key sections in configuring an idealized case in 
 Most of the dynamics options are the same as the previous two case studies, and the user is referred to Case Study 1 for options that are not explained in this section. In this case, “diff_opt” is set to 2 which indicates full diffusion scheme in all the X, Y, and Z dimension. This options, in general, controls the turbulence and mixing (i.e., diffusion) scheme of WRF atmospheric model. “km_opt” is set to 3 in this case study which means that the model will use 3D Turbulent Kinetic Energy (TKE) scheme to determine eddy coefficients for the diffusion scheme used (“diff_opt”). Uper-level damping is turned off in the simulation by setting “damp_opt” to zero. Smagorinsky (“c_s”) and TKE (“c_k”) coefficients are set to 0.18 and 0.1, respectively. The options that are added and/or modified to this point of dynamics section in comparison to the previous case studies are to setup the atmospheric model in LES mode. To create the desired idealized surface in this case study, the drag coefficient (” tke_drag_coefficient”) and the heat flux (“tke_heat_flux”) of the surface is set to constant 0.005 and 0.1 (in K ms-1), respectively. Another option turned on for this model is “pert_coriolis” which applies the Coriolis term to the wind. This option must be enabled when simulating in an idealized case in LES mode. Other dynamics options of this case study are same as Case Study 1, and they are explained in that case study.
 
 &bdy_control
-^^^^^^^^^^^^
+&&&&&&&&&&&&
 
 Periodic boundary condition is used in both X and Y directions in this model.
 
@@ -950,7 +950,7 @@ Periodic boundary condition is used in both X and Y directions in this model.
    /
    
 &namelist_quilt
-^^^^^^^^^^^^^^^
+&&&&&&&&&&&&&&&
 
 Reserved CPU cores (“nio_tasks_per_group”) for managing the outputs is set to zero as this case is a simple small case.
 
@@ -962,7 +962,7 @@ Reserved CPU cores (“nio_tasks_per_group”) for managing the outputs is set t
    /
    
 &fire
-^^^^^
+&&&&&
 
 The fire section options (i.e., WRF-Fire options) of this case study are the same as Case Study 1 except a temparture perturbation bubble is added to kick-off the turbulence for LES.  For the purpose of the tutorial, the options within “&fire” is divided into multiple sub-sections as follows.
  
@@ -1045,12 +1045,12 @@ The “&fire” section of this case study is as follows.
    /
 
 Namelist.fire
-^^^^^^^^^^^^^
+&&&&&&&&&&&&&
 
 For this case, we use the namelist.fire of Case Study 1 which defines the fuel types based on Anderson’s 13 fuel model [6]. The structure of “namelist.fire” fire and the options definition are provided in :ref:`Case Study 1-namelist.fire<c1NF>`. The namelist.fire of this case is as follows.
 
 &fuel_scalars
-^^^^^^^^^^^^^
+&&&&&&&&&&&&&
 
 ::
 
@@ -1064,7 +1064,7 @@ For this case, we use the namelist.fire of Case Study 1 which defines the fuel t
    /
 
 &fuel_categories
-^^^^^^^^^^^^^^^^
+&&&&&&&&&&&&&&&&
 
 ::
 
@@ -1090,7 +1090,7 @@ For this case, we use the namelist.fire of Case Study 1 which defines the fuel t
    /
    
 Input_sounding
-^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~
 
 The “input_sounding” file of this case is exactly the same as Case Study 1 except the wind speed is set to zero, and it is as follows. Fore information on “input_sounding” file structure and how to create it, refer to :ref:`Case Study 1-input_sounding<c1IS>`. Note that the initial temperature of the model is linearly increasing from 300 K at 1000 m to 310 K at 2000 m to prevent the turbulence from reaching the model top which is required to properly simulate LES in idealized case.
 
@@ -1131,8 +1131,7 @@ Sample Output
 
 The sample outputs for this case study are provided for two scenarios: (1) no initial wind and (2) uniform 2.5 ms-1 wind in the X direction. To simulate the second scenario, the input_sounding must be modified to include the wind speed. The modification can be done using the “input_sounding” description provided in :ref:`Case Study 1<case1>`. Same as the previous case studies, the sample outputs provided below are plotted using the provided Python codes :ref:`here<python>`.
 
-No Initial Wind Scenario
-^^^^^^^^^^^^^^^^^^^^^^^^
+**No Initial Wind Scenario**
 
 Although the initial wind speed of the first scenario is zero, the figure for 30 min after the start of simulation shows non-zero wind as well as not consistent wind speed and direction. This is due to the fact that the model is configured in LES mode, and the heat flux and drag from the surface causes alternations in the atmosphere resulting in the generation of turbulent eddies in the domain 30 min after the start of simulation. After the ignition, the resolved turbulent eddies causes the fire to propagate in all direction at the beginning of the ignition (i.e., 20 min after the ignition). Around 30 min after the ignition, the vertical updraft and downdraft caused by the fire heat flux increases the wind behind the fire head resulting in the fire head to propagate along the X direction. However, the fire almost stops propagating 60 min after the ignition as the wind direction at the front of the fire head is against the fire spread direction. This phenomenon is due to the increased heat flux from the fire that makes the vertical updraft stronger; hence, sucking more air into the base of the fire head and reversing the wind direction at the front of the fire head toward the head. 
 
@@ -1178,7 +1177,7 @@ Although the initial wind speed of the first scenario is zero, the figure for 30
   :alt: Alternative text
 .. centered:: 90 min after the ignition (end of the simulation)
   
-** Uniform 2.5 ms\ :sup:`-1`\  Initial Wind Scenario **
+**Uniform 2.5 ms\ :sup:`-1`\  Initial Wind Scenario**
 
 In this scenario the wind speed is set to 2.5 ms\ :sup:`-1`\  to demonstrate the effects of LES on non-zero wind field. Although the applied initial wind field is uniform 2.5 ms\ :sup:`-1`\,  the wind field is not uniform 30 min after the start of simulation due to the LES. The non-uniform simulated wind field also affects the fire propagation process as seen in the below figures. While the fire maintains the “U” shaped perimeter, which is a characteristic of wind-driven fires, the resolved turbulent eddies due to LES make the fire to propagate with a non-uniform perimeter. Furthermore, the fire perimeter in this case is not symmetric in contrast to the previous case studies, which is also caused by LES configuration of the model. The effects of fire-atmosphere coupling are also evident in this case. The below figure shows that the wind behind the fire head is along the fire spread direction which is as a result of the vertical downdraft generated by the fire heat flux. Moreover, the wind at the front of the fire head is toward the fire head which is due to the air suction to the base of the fire caused by the fire’s vertical plume. This toward wind causes the fire to propagate with a “U” shaped head which, in contrast to Case Study 1 (i.e., uncoupled simulation), has a sharper angle and is more similar to a “V” shape.
 
