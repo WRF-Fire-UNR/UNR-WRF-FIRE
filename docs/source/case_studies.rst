@@ -510,7 +510,7 @@ The domains setup of this case including domain size, time step, and fire domain
    
 The model utilizes a 5 by 5 km domain with the atmospheric grid size of 100 m and the model top at 2 km. the time step is set to 0.25 s. The fire grid is 4 times finer than the atmospheric domain.
 
-**&physics****
+**&physics**
 
 All the physics options in this case are turned off same as the previous case study.
 
@@ -556,7 +556,7 @@ Dynamics options of this model are the same as the Case Study 1.
    tracer_opt                          = 3,
    /
 
-****&bdy_control******
+**&bdy_control**
 
 Periodic boundary condition is used in both X and Y directions in this model.
 
@@ -586,7 +586,7 @@ Reserved CPU cores (“nio_tasks_per_group”) for managing the outputs is set t
    nio_groups = 1,
    /
    
-**&fire****
+**&fire**
 
 The atmospheric options of this case study (i.e., WRF model options) were all the same as Case Study 1. WRF-Fire options are also the same as the previous case except with few changes to turn on fire-atmosphere coupling and add an idealized ridge.  For the purpose of the tutorial, the options within “&fire” is divided into multiple sub-sections as follows.
 
@@ -663,11 +663,11 @@ The “&fire” section of this case study is as follows.
    fire_boundary_guard=-1,
    /
 
-**Namelist.fire****
+**Namelist.fire**
 
 For this case, we use the namelist.fire of Case Study 1 which defines the fuel types based on Anderson’s 13 fuel model. The structure of “namelist.fire” fire and the options definition are provided in :ref:`Case Study 1-namelist.fire<c1NF>`. The namelist.fire of this case is as follows.
 
-**&fuel_scalars****
+**&fuel_scalars**
 
 ::
 
@@ -885,7 +885,7 @@ The physics options of this case study are as follows.
   
 Since the goal is to simulate an idealized surface in LES mode, the surface model (sf_sfclay_physics”) is turned on in this case study, and it is set to 1 which indicates Revised MM5 Similarity surface parametrization scheme. Other options for surface parametrization scheme are available at WRF’s User’s Guide Chapter 5. “sf_surface_physics” indicates the land-surface parametrization scheme which is used to parametrize the land features such as land cover (i.e., vegetation) In this case, however, we are not using this option, and we will define an idealized surface in the “&dynamics” section. “bl_pbl_physics” controls the Planetary Boundary Layer (PBL) parametrization which in this case is set to 0 indicating that no PBL scheme is used. This option must be set to 0 to configure the domain in LES mode. The other option turned on in this case study is “isfflx” which enables the heat and moisture fluxes from the surface. Other physics options are turned off.
 
-**&dynamics****
+**&dynamics**
 
 Dynamics options is one of the key sections in configuring an idealized case in LES mode. The dynamics options of this case study are as follows.
 
