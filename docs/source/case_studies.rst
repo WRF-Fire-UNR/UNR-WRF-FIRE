@@ -478,7 +478,7 @@ The options and values used for this case study are same as the Case Study 1 and
    
 Same as the Case Study 1, the simulation duration of this case is one hour, and output files are generated each 2 minutes.
 
-**&domains****
+**&domains**
 
 The domains setup of this case including domain size, time step, and fire domain setup is exactly the same as the Case Study 1. 
 
