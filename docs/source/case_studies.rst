@@ -223,13 +223,9 @@ To this point, all the previous sections were for setting up the WRF atmospheric
     
 The above set of options are used to define fire ignition characteristics. WRF-Fire supports for up to 5 ignition lines, and the number of ignition lines is defined using “fire_num_ignition” which is 1 in this case. The next four options specify the X and Y coordinates of ignition line start and end points in meters from the lower left corner of the domain. “fire_ignition_ros1” and “fire_ignition_radius1” specify the ignition line ROS during the ignition and ignition line radius, width in other words, respectively. The last two options define the ignition start and end time from the beginning of the simulation in seconds.
 
-.. Note:: the number 1 at the end of the above-mentioned ignition line characteristics indicates the ignition line number. Therefore, if 2 ignition lines are desired, all the above options must be repeated with the difference that the end number must be changed to 2. For instance, the ignition ROS of the ignition line 2 is “fire_ignition_ros2”.
+.. Note:: The number 1 at the end of the above-mentioned ignition line characteristics indicates the ignition line number. Therefore, if 2 ignition lines are desired, all the above options must be repeated with the difference that the end number must be changed to 2. For instance, the ignition ROS of the ignition line 2 is “fire_ignition_ros2”.
 
-.. Note:: one of the known issues of WRF-Fire is that the fire does not ignite or ignites with a delay under special circumstances. In order to ensure fire ignition, the below equation must be satisfied:
-
-.. centered:: lfn\ :sub:`new`\ =d -min⁡(radius, ROS* (end\ :sub:`ts`\ - time\ :sub:`ign`\)<0
-
-Where, d is the distance from ignition line to the nearest fire grid point, radius is ignition line radius, ROS is ignition rate of spread, and time\ :sub:`ign`\  and end\ :sub:`ts`\  is ignition start and end time, respectively. 
+.. Note:: One of the known issues of WRF-Fire is that the fire does not ignite or ignites with a delay under special circumstances. In order to ensure fire ignition, the below equation must be satisfied: lfn\ :sub:`new`\ =d -min⁡(radius, ROS* (end\ :sub:`ts`\ - time\ :sub:`ign`\)<0 Where, d is the distance from ignition line to the nearest fire grid point, radius is ignition line radius, ROS is ignition rate of spread, and time\ :sub:`ign`\  and end\ :sub:`ts`\  is ignition start and end time, respectively. 
 
 ::
 
@@ -388,7 +384,7 @@ The complete “input_sounding” used for this study is as follows.
     
 In this case study, the surface is assumed to be at 1,000 pa pressure level, and water vapor mixing ratio is assumed to be zero. The wind speed is uniform 5 m s-1 along the X direction. The surface temperature is set to 305 K. The temperature is assumed to be constant 300 K till 1 km altitude, and it increases linearly to 311 K from 1 to 2.1 km.
 
-.. Note:: the elevations specified in “input_sounding” do not need to match the WRF vertical levels. WRF interpolates the parameters from “input_sounding to model levels.
+.. Note:: The elevations specified in “input_sounding” do not need to match the WRF vertical levels. WRF interpolates the parameters from “input_sounding to model levels.
 
 Sample Output
 ^^^^^^^^^^^^^
