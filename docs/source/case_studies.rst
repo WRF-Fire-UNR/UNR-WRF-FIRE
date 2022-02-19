@@ -24,7 +24,8 @@ In idealized cases, WRF-Fire requires three input files:
 
 .. Note:: The input files are text files which can be generated/edited using text editors such as Notepad and Sublime Text.
 
-**Hint:** The best way to generate the input files is to use sample inputs such as hill_simple and two_fires, and modify them as required.
+.. admonition:: Hint
+   The best way to generate the input files is to use sample inputs such as hill_simple and two_fires, and modify    them as required.
 
 Namelist.input
 ~~~~~~~~~~~~~~
