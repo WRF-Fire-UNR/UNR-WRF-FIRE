@@ -322,6 +322,7 @@ The initial atmosphere state of the WRF atmospheric model is defined by “input
 The first row of the “input_sounding” determines the surface characteristics as demonstrated in the following table.
 
 .. list-table:: 
+   :align: center
    :widths: 33 33 33
    :header-rows: 0
 
