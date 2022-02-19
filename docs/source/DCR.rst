@@ -17,4 +17,5 @@ In this section, the steps to compile WRF-Fire along with the required compilers
    Mac
    Windows
    singularity_container
+   Idealized
    Real
