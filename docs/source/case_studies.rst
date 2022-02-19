@@ -33,7 +33,8 @@ All the modelling parameters and assumptions for both WRF atmospheric model and 
 
 
 General Structure
-&&&&&&&&&&&&&&&&&
+~~~~~~~~~~~~~~~~~
+
 
 The general structure of the “namelist.input” file is as follows.
 
@@ -53,8 +54,7 @@ The general structure of the “namelist.input” file is as follows.
 
 The options activated in each section for this case study are presented in this section.
 
-&time_control
-&&&&&&&&&&&&&
+**&time_control**
 
 The temporal setup of the model, such as simulation duration, simulation date and time, and outputs interval, is controlled by this section. The options and values used for this case study is shown below.
 
@@ -89,8 +89,8 @@ The temporal setup of the model, such as simulation duration, simulation date an
 
 Most of the options in this section are self-explanatory. In this case study, the model will be running for 1 hour (see options “run_days”, “run_hours”, etc.). The simulation start and end date and time are not important in most of the idealized cases, and therefore, the date is set to all 1 and the time is from 0 to 1 hour.  Options “history_interval_s” and “frames_per_outfile” specify the output interval in seconds and the number of outputs per output file, respectively. For instance, these options are set to 120 and 1 in this case meaning WRF-Fire will generate outputs each 120 seconds and writes each output interval on a separate file. The options beginning with “io” defines the input/output file format, and option 2 used herein is for “NetCDF” format which is the typically used format in WRF and WRF-Fire.
 
-&domains
-&&&&&&&&
+**&domains**
+
 
 This section controls domain setup of the model which includes number of domains, domains sizes, domains starting and ending points, grid size, and time step. The domain setup of this case is as follows.
 
@@ -122,8 +122,7 @@ This section controls domain setup of the model which includes number of domains
     
 “time_step” defines the model time step in seconds, and “time_step_fract_num” and “time_step_fract_den” specify the nominator and denominator of the fractional part of the time step in seconds, respectively. “max_dom” specifies the number of domains, and options starting with “s_” and “e_” are used to define the domain start and end point in west-east (we), south-north (sn), and vertical (vert) directions. Grid sizes in X and Y direction are defined using “dx” and “dy” in meters, and the model top is set to 2000 meters using “ztop” option. “grid_id” and “parent_id” options define the domain number and the its respective parent domain number. In this case, for instance, since the model only has one domain, the domain number is set to 1 and its parent number is 0 meaning that this is the outermost domain. “i_parent_start” and “j_parent_start” which specify the starting grid point of the domain within its parent domain are also set to zero in this case as it is a single domain model. “sr_x” and “sr_y” options defines the fire domain refining, and in this case, they are 4 resulting in a fire domain 4 times finer than the main atmospheric domain.
 
-&physics
-&&&&&&&&
+**&physics**
 
 Physics section is used to activate physics schemes of WRF atmospheric model. Since in this case the goal is to represent Rothermel’s ROS equation, i.e., the model is uncoupled with uniform wind field, all the physics options are turned off as shown below.
 
@@ -145,8 +144,7 @@ Physics section is used to activate physics schemes of WRF atmospheric model. Si
     mp_zero_out                         = 0,
     /
 
-&dynamics
-&&&&&&&&&
+**&dynamics**
 
 Dynamics section controls the parametrization schemes of WRF atmospheric model. This model uses WRF classic terrain-following vertical grid instead of a hybrid terrain-following and isobaric grid. This setup is indicated by turning off “hybrid_opt” option. The temporal discretization of the model is set to 3rd order Runge-Kutta scheme using “rk_ord” option which defines the order of the Runge-Kutta scheme. Diffusion options, “diff_opt” and “km_opt”, are turned off as we want to achieve a uniform constant wind field. Furthermore, surface drag and heat flux, “tke_drag_coefficient” and “tke_heat_flux”, are set to zero to create an idealized slip-free surface that will not affect the wind field. WRF atmospheric model of this case is ran non-hydrostatically by setting “non_hydrostatic” option to true. Horizontal momentum and scalar advection order is default 5, and vertical momentum and advection order is default 3. “time_step_sound” which defines the ratio of model time step to sounding time step is set to 20 in this case. Moisture and scalar advection, “moist_adv_opt” and “scalar_adv_opt”, are the default positive-definite scheme. The tracer option, “tracer_opt”, is set to 3 which is the value must be used for WRF-Fire simulations. This variable activates tracers in WRF atmospheric model to simulate smoke dispersion from fire. 
 
@@ -170,8 +168,7 @@ Dynamics section controls the parametrization schemes of WRF atmospheric model. 
      tracer_opt                          = 3,
      /
 
-&bdy_control
-&&&&&&&&&&&&
+**&bdy_control**
 
 This section specifies the atmospheric model’s boundary condition. Multiple options are available in idealized cases, and they are described in WRF Technical Note Chapter 6. For this case, the periodic boundary condition is activated.
 
@@ -190,8 +187,7 @@ This section specifies the atmospheric model’s boundary condition. Multiple op
      open_ye                             = .false.,
      /
      
-&namelist_quilt
-&&&&&&&&&&&&&&&
+**&namelist_quilt**
 
 The options within this section allow for reserving several CPU cores to manage output only. These options are useful when the domain is large, but in this simple case reserved CPU cores (“nio_tasks_per_group”) is set to zero.
 
@@ -202,8 +198,7 @@ The options within this section allow for reserving several CPU cores to manage 
     nio_groups = 1,
     /
     
-&fire
-&&&&&
+**&fire**
 
 To this point, all the previous sections were for setting up the WRF atmospheric model. This section includes the setting required for WRF-Fire fire spread platform. For the purpose of the tutorial, the options within “&fire” is divided into multiple sub-sections as follows.
 ::
@@ -283,8 +278,7 @@ The fuel characteristics required in Rothermel’s equation, such as fuel load, 
 
 .. Note:: same as “namelist.input”, modifying one of the sample files is highly recommended. 
 
-&fuel_scalars
-&&&&&&&&&&&&&
+**&fuel_scalars**
 
 This section includes the fuel characteristics that are constant among all the fuel types. “&fuel_scalars” parameters used for this case study is based on Rothermel’s model and Anderson’s 13 fuel categories, and they are as follows.
 
@@ -301,8 +295,7 @@ This section includes the fuel characteristics that are constant among all the f
     
 In the above parameters, the “cmbcnst” and “hfgl” parameters define combustion heat of dry fuel in J kg-1 and heat flux to ignite canopy in W m-2, respectively. The “fuelmc_g” and “fuelmc_c” specify the fuel moisture content of surface (ground) and canopy fuel, respectively. The total number of fuel categories are set to 13 using “nfuelcats” option, and non-burnable fuel is assigned fuel category 14 using “no_fuel_cat” option meaning that pixels defined with fuel category 14 will be considered as non-burnable, and they will not burn during the simulation.
 
-&fuel_categories
-&&&&&&&&&&&&&&&&
+**&fuel_categories**
 
 Fuel characteristics for each fuel type are defined in this section. In the following “&fuel_categories” used for this case study, “windrf” is the wind adjustment factor which calculates the wind at mid-flame length from the wind speed at 6.5 meters. “fgi” and “fueldepthm” are used to specify the total fuel load in kg m-2 and fuel depth in meters for each fuel type, respectively. Fuel particle surface-area to volume ratio is defined in m-1 using “savr” parameter, and fuel moisture content of extinction is defined using “fuelmce” parameter. “fueldense” specifies the fuel particle density, which is 32 kg m-1 for solid and 19 kg m-1 for rotten fuels. “st” and “se” parameters specify fuel particle total and effective mineral content, respectively. “weight” parameter specifies the weighting factor used to calculate the heat flux from fire. 
 
@@ -323,7 +316,8 @@ Fuel characteristics for each fuel type are defined in this section. In the foll
 .. _c1IS:
 
 Input_sounding
-&&&&&&&&&&&&&&
+~~~~~~~~~~~~~~
+
 The initial atmosphere state of the WRF atmospheric model is defined by “input_sounding” file. Same as other input files, this is also text file which can be edited using any text editors. The structure of “input_sounding” is as follows.
 The first row of the “input_sounding” determines the surface characteristics as demonstrated in the following table.
 
@@ -380,48 +374,44 @@ In this case study, the surface is assumed to be at 1,000 pa pressure level, and
 .. Note:: the elevations specified in “input_sounding” do not need to match the WRF vertical levels. WRF interpolates the parameters from “input_sounding to model levels.
 
 Sample Output
-&&&&&&&&&&&&&
+^^^^^^^^^^^^^
 
 Sample outputs of this case study is shown in the below figures. These figures are generated using the in-house Python code to plot fire perimeter, topography, and wind field in idealized simulations. The mentioned Python code along with its description is available in :ref:`this<python>` page.
 This model results are purely Rothermel’s ROS theorem as the fire/atmosphere coupling is turned off and the wind field is constant during the simulation. The “U” shape of the fire propagation, which is the well-known fire shape driven by wind, is clearly present in the results, and the fire is propagating along the wind direction indicating that the results are correct. Moreover, fire ROS is constant throughout the simulation, and it is equal to value resulted by Rothermel’s ROS equation for fuel type 1, short grass, under no topography and 5 ms\ :sup:`-1`\  wind speed.
 
 
-Beginning of the simulation
-&&&&&&&&&&&&&&&&&&&&&&&&&&&
 .. image:: images/Beginnings.png
   :align: center
   :width: 700
   :height: 400
   :alt: Alternative text
+.. centered:: Beginning of the simulation
 
-10 min after start of the simulation 
-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 .. image:: images/10mins.png
   :align: center
   :width: 700
   :height: 400
   :alt: Alternative text
+.. centered:: 10 min after start of the simulation 
 
-
-20 min after start of the simulation
 
 .. image:: images/20mins.png
   :align: center
   :width: 700
   :height: 400
   :alt: Alternative text
+.. centered:: 20 min after start of the simulation
 
-
-End of the simulation 
-&&&&&&&&&&&&&&&&&&&&&
 .. image:: images/Ends.png
   :align: center
   :width: 700
   :height: 400
   :alt: Alternative text
+.. centered:: End of the simulation 
   
   
 References
+^^^^^^^^^^
 
 [1]	D. Muñoz-Esparza, B. Kosović, P. A. Jiménez, and J. L. Coen, “An Accurate Fire-Spread Algorithm in the Weather Research and Forecasting Model Using the Level-Set Method,” J. Adv. Model. Earth Syst., vol. 10, no. 4, pp. 908–926, Apr. 2018, doi: 10.1002/2017MS001108.
 
@@ -441,8 +431,7 @@ The second case study is same as the first case study except the model in now co
 Namelist.input
 ~~~~~~~~~~~~~~
 
-&time_control
-&&&&&&&&&&&&&
+**&time_control**
 
 The options and values used for this case study are same as the Case Study 1 and shown below.
 
@@ -477,8 +466,7 @@ The options and values used for this case study are same as the Case Study 1 and
    
 Same as the Case Study 1, the simulation duration of this case is one hour, and output files are generated each 2 minutes.
 
-&domains
-&&&&&&&&
+**&domains****
 
 The domains setup of this case including domain size, time step, and fire domain setup is exactly the same as the Case Study 1. 
 
@@ -510,8 +498,7 @@ The domains setup of this case including domain size, time step, and fire domain
    
 The model utilizes a 5 by 5 km domain with the atmospheric grid size of 100 m and the model top at 2 km. the time step is set to 0.25 s. The fire grid is 4 times finer than the atmospheric domain.
 
-&physics
-&&&&&&&&
+**&physics****
 
 All the physics options in this case are turned off same as the previous case study.
 
@@ -533,8 +520,7 @@ All the physics options in this case are turned off same as the previous case st
    mp_zero_out                         = 0,
    /
 
-&dynamics
-&&&&&&&&&
+**&dynamics**
 
 Dynamics options of this model are the same as the Case Study 1.
 
@@ -558,8 +544,7 @@ Dynamics options of this model are the same as the Case Study 1.
    tracer_opt                          = 3,
    /
 
-&bdy_control
-&&&&&&&&&&&&
+****&bdy_control******
 
 Periodic boundary condition is used in both X and Y directions in this model.
 
@@ -578,8 +563,7 @@ Periodic boundary condition is used in both X and Y directions in this model.
    open_ye                             = .false.,
    /
    
-&namelist_quilt
-&&&&&&&&&&&&&&&
+**&namelist_quilt**
 
 Reserved CPU cores (“nio_tasks_per_group”) for managing the outputs is set to zero as this case is a simple small case.
 
@@ -590,8 +574,7 @@ Reserved CPU cores (“nio_tasks_per_group”) for managing the outputs is set t
    nio_groups = 1,
    /
    
-&fire
-&&&&&
+**&fire****
 
 The atmospheric options of this case study (i.e., WRF model options) were all the same as Case Study 1. WRF-Fire options are also the same as the previous case except with few changes to turn on fire-atmosphere coupling and add an idealized ridge.  For the purpose of the tutorial, the options within “&fire” is divided into multiple sub-sections as follows.
 
@@ -668,13 +651,11 @@ The “&fire” section of this case study is as follows.
    fire_boundary_guard=-1,
    /
 
-Namelist.fire
-~~~~~~~~~~~~~
+**Namelist.fire****
 
 For this case, we use the namelist.fire of Case Study 1 which defines the fuel types based on Anderson’s 13 fuel model. The structure of “namelist.fire” fire and the options definition are provided in :ref:`Case Study 1-namelist.fire<c1NF>`. The namelist.fire of this case is as follows.
 
-&fuel_scalars
-&&&&&&&&&&&&&
+**&fuel_scalars****
 
 ::
 
@@ -687,8 +668,7 @@ For this case, we use the namelist.fire of Case Study 1 which defines the fuel t
    no_fuel_cat = 14                 
    /
    
-&fuel_categories
-&&&&&&&&&&&&&&&&
+**&fuel_categories**
 
 ::
 
@@ -800,8 +780,7 @@ The third case study presented in herein dives deeper into the atmospheric optio
 Namelist.input
 ~~~~~~~~~~~~~~
 
-&time_control
-&&&&&&&&&&&&&
+**&time_control**
 
 The options and values used for this case study are same as the Case Study 1 and shown below.
 
@@ -836,8 +815,7 @@ The options and values used for this case study are same as the Case Study 1 and
    
 The simulation in this case study is run for 2 hours (see “start_hour” and “end_hour” options), and the output interval is set to 600 seconds (“history_interval_s), i.e., WRF-Fire will generate an output file each 10 minutes.
 
-&domains
-&&&&&&&&
+**&domains**
 
 The domains setup of this case including domain size, time step, and fire domain setup is exactly the same as the Case Study 1. 
 
@@ -871,8 +849,7 @@ The domains setup of this case including domain size, time step, and fire domain
    
 The time step of this case study is set to 0.5 second (“time_step_fract_num” determines the time step nominator and “time_step_fract_den” determines the time step denominator). The model utilizes a single domain (“max_dom”) with grid size 40 m in both X and Y direction (“dx” and “dy”). The number of grid points in both X and Y direction is equal to 126 grid points (see “s_we” and “e_we” for X direction, and “s_sn” and “e_sn” for Y direction), which results in a 5 by 5 km domain. The fire grid is eight times finer than the atmospheric domain on both X and Y directions (“sr_x” and “sr_y”). Other domain setup options are the same as Case Study 1.
 
-&physics
-&&&&&&&&
+**&physics**
 
 The physics options of this case study are as follows.
 
@@ -896,8 +873,7 @@ The physics options of this case study are as follows.
   
 Since the goal is to simulate an idealized surface in LES mode, the surface model (sf_sfclay_physics”) is turned on in this case study, and it is set to 1 which indicates Revised MM5 Similarity surface parametrization scheme. Other options for surface parametrization scheme are available at WRF’s User’s Guide Chapter 5. “sf_surface_physics” indicates the land-surface parametrization scheme which is used to parametrize the land features such as land cover (i.e., vegetation) In this case, however, we are not using this option, and we will define an idealized surface in the “&dynamics” section. “bl_pbl_physics” controls the Planetary Boundary Layer (PBL) parametrization which in this case is set to 0 indicating that no PBL scheme is used. This option must be set to 0 to configure the domain in LES mode. The other option turned on in this case study is “isfflx” which enables the heat and moisture fluxes from the surface. Other physics options are turned off.
 
-&dynamics
-&&&&&&&&&
+**&dynamics****
 
 Dynamics options is one of the key sections in configuring an idealized case in LES mode. The dynamics options of this case study are as follows.
 
@@ -929,8 +905,7 @@ Dynamics options is one of the key sections in configuring an idealized case in 
    
 Most of the dynamics options are the same as the previous two case studies, and the user is referred to Case Study 1 for options that are not explained in this section. In this case, “diff_opt” is set to 2 which indicates full diffusion scheme in all the X, Y, and Z dimension. This options, in general, controls the turbulence and mixing (i.e., diffusion) scheme of WRF atmospheric model. “km_opt” is set to 3 in this case study which means that the model will use 3D Turbulent Kinetic Energy (TKE) scheme to determine eddy coefficients for the diffusion scheme used (“diff_opt”). Uper-level damping is turned off in the simulation by setting “damp_opt” to zero. Smagorinsky (“c_s”) and TKE (“c_k”) coefficients are set to 0.18 and 0.1, respectively. The options that are added and/or modified to this point of dynamics section in comparison to the previous case studies are to setup the atmospheric model in LES mode. To create the desired idealized surface in this case study, the drag coefficient (” tke_drag_coefficient”) and the heat flux (“tke_heat_flux”) of the surface is set to constant 0.005 and 0.1 (in K ms-1), respectively. Another option turned on for this model is “pert_coriolis” which applies the Coriolis term to the wind. This option must be enabled when simulating in an idealized case in LES mode. Other dynamics options of this case study are same as Case Study 1, and they are explained in that case study.
 
-&bdy_control
-&&&&&&&&&&&&
+**&bdy_control**
 
 Periodic boundary condition is used in both X and Y directions in this model.
 
@@ -949,8 +924,7 @@ Periodic boundary condition is used in both X and Y directions in this model.
    open_ye                             = .false.,
    /
    
-&namelist_quilt
-&&&&&&&&&&&&&&&
+**&namelist_quilt**
 
 Reserved CPU cores (“nio_tasks_per_group”) for managing the outputs is set to zero as this case is a simple small case.
 
@@ -961,8 +935,7 @@ Reserved CPU cores (“nio_tasks_per_group”) for managing the outputs is set t
    nio_groups = 1,
    /
    
-&fire
-&&&&&
+**&fire**
 
 The fire section options (i.e., WRF-Fire options) of this case study are the same as Case Study 1 except a temparture perturbation bubble is added to kick-off the turbulence for LES.  For the purpose of the tutorial, the options within “&fire” is divided into multiple sub-sections as follows.
  
@@ -1045,12 +1018,11 @@ The “&fire” section of this case study is as follows.
    /
 
 Namelist.fire
-&&&&&&&&&&&&&
+~~~~~~~~~~~~~
 
 For this case, we use the namelist.fire of Case Study 1 which defines the fuel types based on Anderson’s 13 fuel model [6]. The structure of “namelist.fire” fire and the options definition are provided in :ref:`Case Study 1-namelist.fire<c1NF>`. The namelist.fire of this case is as follows.
 
-&fuel_scalars
-&&&&&&&&&&&&&
+**&fuel_scalars**
 
 ::
 
@@ -1063,8 +1035,7 @@ For this case, we use the namelist.fire of Case Study 1 which defines the fuel t
    no_fuel_cat = 14                 
    /
 
-&fuel_categories
-&&&&&&&&&&&&&&&&
+**&fuel_categories**
 
 ::
 
