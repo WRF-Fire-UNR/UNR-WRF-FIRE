@@ -321,11 +321,17 @@ Input_sounding
 The initial atmosphere state of the WRF atmospheric model is defined by “input_sounding” file. Same as other input files, this is also text file which can be edited using any text editors. The structure of “input_sounding” is as follows.
 The first row of the “input_sounding” determines the surface characteristics as demonstrated in the following table.
 
-.. image:: images/table1.png
-  :align: center
-  :width: 600
-  :height: 50
-  :alt: Alternative text
+.. list-table:: 
+   :widths: 33 33 33
+   :header-rows: 0
+
+   * - 1,000.0
+     - 305.0
+     - 0.0
+   * - Surface pressure (pa)
+     - Surface temerature (K)
+     - Water vapor mixing ratio (kg kg\ :sup:`-1`\)
+   
 
 The other rows of the “input_sounding” file specify the atmosphere state at different elevations. The structure of these rows is demonstrated in the following table.
 
