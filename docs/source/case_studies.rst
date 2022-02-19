@@ -404,7 +404,7 @@ Beginning of the simulation
 
 
 20 min after start of the simulation
-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
 .. image:: images/20mins.png
   :align: center
   :width: 700
@@ -756,45 +756,41 @@ Sample outputs of this case study is shown below are plotted using the Python co
 
 This model represents the effects of topography on the simulated wind field and the effects of fire-atmosphere coupling on the fire propagation process. Although an initial uniform 5 ms-1 wind is imposed to the domain, the tall ridge alters the wind speed and reverses the wind direction toward the negative X direction. This alternation causes the fire to propagate toward the negative X direction which is along the wind direction, and it is in agreement with Rothermel’s ROS theory. Furthermore, the heat flux from the fire creates a vertical updraft at the fire head that sucks air into the fire base. This suction causes the wind field to be redirected toward the fire head 40 min after ignition resulting in a clear fire finger toward the wind direction (i.e., negative X direction). Near the end of the simulation, the suction also causes the wind speed at the front of the fire to reach zero, and prevents the fire to further spread.
 
-Beginning of the simulation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 .. image:: images/beg-2z.png
   :align: center
   :width: 700
   :height: 400
   :alt: Alternative text
+.. centered:: Beginning of the simulation
   
-10 min after start of the simulation 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. image:: images/10-2z.png
   :align: center
   :width: 700
   :height: 400
   :alt: Alternative text
+.. centered:: 10 min after start of the simulation 
   
-20 min after start of the simulation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. image:: images/20-2z.png
   :align: center
   :width: 700
   :height: 400
   :alt: Alternative text
+.. centered:: 20 min after start of the simulation
   
-40 min after start of the simulation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. image:: images/40-2z.png
   :align: center
   :width: 700
   :height: 400
   :alt: Alternative text
+.. centered:: 40 min after start of the simulation
   
-60 min after the start of simulation (end of the simulation)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. image:: images/end-2z.png
   :align: center
   :width: 700
   :height: 400
   :alt: Alternative text
+.. centered:: 60 min after the start of simulation (end of the simulation) 
   
 Case Study 3: Idealized Flat-surface Coupled Model Configured in Large Eddy Simulation (LES)
 --------------------------------------------------------------------------------------------
@@ -1145,42 +1141,42 @@ Although the initial wind speed of the first scenario is zero, the figure for 30
   :width: 700
   :height: 400
   :alt: Alternative text
-    .. centered:: Beginning of the ignition (30 min after the start of simulation)
+.. centered:: Beginning of the ignition (30 min after the start of simulation)
     
 .. image:: images/3-2.png
   :align: center
   :width: 700
   :height: 400
   :alt: Alternative text
-    .. centered:: 10 min after the ignition
+.. centered:: 10 min after the ignition
     
 .. image:: images/3-3.png
   :align: center
   :width: 700
   :height: 400
   :alt: Alternative text
-    .. centered:: 20 min after the ignition
+.. centered:: 20 min after the ignition
   
 .. image:: images/3-4.png
   :align: center
   :width: 700
   :height: 400
   :alt: Alternative text
-    .. centered:: 30 min after the ignition
+.. centered:: 30 min after the ignition
   
 .. image:: images/3-5.png
   :align: center
   :width: 700
   :height: 400
   :alt: Alternative text
-    .. centered:: 60 min after the ignition
+.. centered:: 60 min after the ignition
   
 .. image:: images/3-6.png
   :align: center
   :width: 700
   :height: 400
   :alt: Alternative text
-    .. centered:: 90 min after the ignition (end of the simulation)
+.. centered:: 90 min after the ignition (end of the simulation)
   
 ** Uniform 2.5 ms\ :sup:`-1`\  Initial Wind Scenario **
 
@@ -1192,35 +1188,35 @@ In this scenario the wind speed is set to 2.5 ms\ :sup:`-1`\  to demonstrate the
   :width: 700
   :height: 400
   :alt: Alternative text  
-  .. centered:: Beginning of the ignition (30 min after the start of simulation)
+.. centered:: Beginning of the ignition (30 min after the start of simulation)
 
 .. image:: images/3-8.png
   :align: center
   :width: 700
   :height: 400
   :alt: Alternative text
-  .. centered:: 10 min after the ignition
+.. centered:: 10 min after the ignition
   
 .. image:: images/3-9.png
   :align: center
   :width: 700
   :height: 400
   :alt: Alternative text
-  .. centered:: 20 min after the ignition
+.. centered:: 20 min after the ignition
   
 .. image:: images/3-10.png
   :align: center
   :width: 700
   :height: 400
   :alt: Alternative text
-  .. centered:: 30 min after the ignition
+.. centered:: 30 min after the ignition
   
 .. image:: images/3-11.png
   :align: center
   :width: 700
   :height: 400
   :alt: Alternative text
-  .. centered:: 60 min after the ignition
+.. centered:: 60 min after the ignition
   
 References
 ^^^^^^^^^^
