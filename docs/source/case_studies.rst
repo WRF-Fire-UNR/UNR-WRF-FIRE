@@ -224,7 +224,7 @@ The above set of options are used to define fire ignition characteristics. WRF-F
 
 .. Note:: The number 1 at the end of the above-mentioned ignition line characteristics indicates the ignition line number. Therefore, if 2 ignition lines are desired, all the above options must be repeated with the difference that the end number must be changed to 2. For instance, the ignition ROS of the ignition line 2 is “fire_ignition_ros2”.
 
-.. Note:: One of the known issues of WRF-Fire is that the fire does not ignite or ignites with a delay under special circumstances. In order to ensure fire ignition, the below equation must be satisfied: lfn\ :sub:`new`\ =d -min⁡(radius, ROS* (end\ :sub:`ts`\ - time\ :sub:`ign`\)<0 Where, d is the distance from ignition line to the nearest fire grid point, radius is ignition line radius, ROS is ignition rate of spread, and time\ :sub:`ign`\  and end\ :sub:`ts`\  is ignition start and end time, respectively. 
+.. Note:: One of the known issues of WRF-Fire is that the fire does not ignite or ignites with a delay under special circumstances. In order to ensure fire ignition, the below equation must be satisfied: lfn\ :sub:`new`\ =d -min⁡(radius, ROS* (end\ :sub:`ts`\ - time\ :sub:`ign`\)<0; where d is the distance from ignition line to the nearest fire grid point, radius is ignition line radius, ROS is ignition rate of spread, and time\ :sub:`ign`\  and end\ :sub:`ts`\  is ignition start and end time, respectively. 
 
 ::
 
