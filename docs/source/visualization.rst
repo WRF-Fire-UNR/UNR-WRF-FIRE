@@ -6,8 +6,8 @@ Visualization
 
 .. _Ncview:
 
-How to Visualize the Results Using Ncview
------------------------------------------
+Ncview
+------
 
 .. raw:: html
 
@@ -15,7 +15,11 @@ How to Visualize the Results Using Ncview
 
 -----------------------
 
+In-house Python codes
+---------------------
+
 **How to Install Ncview on Linux**
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Linux users can install Ncview from Advanced Package Tool (apt-get) using the following command:
 
@@ -24,6 +28,7 @@ Linux users can install Ncview from Advanced Package Tool (apt-get) using the fo
    $ sudo apt-get install ncview
 
 **How to Install Ncview on Mac**
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. raw:: html
 
@@ -34,6 +39,7 @@ Linux users can install Ncview from Advanced Package Tool (apt-get) using the fo
    $ brew install ncview
 
 **How to Use Ncview**
+~~~~~~~~~~~~~~~~~~~~~
 
 netCDF files can be opened in Ncview using the following command on both Linux and Mac:
 
