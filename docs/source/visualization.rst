@@ -18,6 +18,31 @@ Ncview
 In-house Python codes
 ---------------------
 
+.. _python:
+   
+Plotting Fire Perimeter and Topography in Idealized Cases
+---------------------------------------------------------
+
+.. raw:: html
+
+   This simple Python code plots snap snapshots of fire perimeter together with filled contours of    the domain topography. This code requires several Python libraries to ran successfully. The key library is WRF-Python which is described in: <a href="https://wrf-python.readthedocs.io/en/latest/" target="_blank">https://wrf-python.readthedocs.io/en/latest/</a> The installation guide of WRF-Python library is also available in the above link. Other required libraries are: <br>
+
+.. raw:: html 
+  
+  <br><a href="https://numpy.org/" target="_blank">- Numpy</a> <br>
+  
+.. raw:: html 
+  
+  <a href="https://matplotlib.org/" target="_blank">- NetCDF 4</a> <br>
+.. raw:: html 
+  
+  <a href="https://matplotlib.org/" target="_blank">- Matplotlib</a> <br><br>
+
+.. Note:: It is highly recommended to install all the libraries using Conda and conda-forge repository in a separate environment dedicated to WRF-Fire visualization to avoid any complications.
+
+.. Note:: Basic Python and Matplotlib knowledge is required to use this code.
+
+
 **How to Install Ncview on Linux**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
