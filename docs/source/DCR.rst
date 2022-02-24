@@ -17,3 +17,4 @@ In this section, the steps to compile WRF-Fire along with the required compilers
    Mac
    Windows
    Real
+   Idealized
