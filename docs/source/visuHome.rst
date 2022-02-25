@@ -1,8 +1,8 @@
 .. _visuHome:
 
-==================
-Visualization Home
-==================
+==============
+Visualization 
+==============
 
 WRF-Fire outputs are in netCDF 4 format meaning they can be read/plotted using different
 methods. In this section, we have provided a variety of methods, from very simple Ncview to
