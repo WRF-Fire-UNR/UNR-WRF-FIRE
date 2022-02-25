@@ -1,3 +1,7 @@
+=============
+Case Study 3
+=============
+
 Case Study 3: Idealized Flat-surface Coupled Model Configured in Large Eddy Simulation (LES)
 --------------------------------------------------------------------------------------------
 
