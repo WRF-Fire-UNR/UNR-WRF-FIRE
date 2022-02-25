@@ -1,5 +1,5 @@
 .. _visuHome:
-
+.. _visualization:
 ==============
 Visualization 
 ==============
@@ -14,4 +14,6 @@ more sophisticated VAPOR software, for WRF-Fire visualization, both 2D and 3D!
    :titlesonly:
    :maxdepth: 2
 
-   visualization
+   ncview
+   inHouse
+   VAPOR
