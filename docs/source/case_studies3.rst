@@ -1,9 +1,7 @@
-=============
-Case Study 3
-=============
 
+============================================================================================
 Case Study 3: Idealized Flat-surface Coupled Model Configured in Large Eddy Simulation (LES)
---------------------------------------------------------------------------------------------
+============================================================================================
 
 The third case study presented in herein dives deeper into the atmospheric options of WRF atmospheric simulation model. The case study presented herein replicates the model used by Coen et al. [1]. By configuring the model in LES mode, the model will resolve turbulent eddies and develop a well-mixed boundary layer. Therefore, the atmospheric domain of the case study will have turbulence in contrast to the previous case studies, which had uniform wind field. The model is initialized with a uniform wind field, and the atmospheric options are configured for LES simulation. The surface is assumed to be an idealized surface with constant heat flux and drag coefficient. More sophisticated representation of the surface will be presented in real data case study. The main goal of this case is to teach how to correctly setup WRF-Fire in LES mode in idealized cases and show the effects of LES in fire spread process. For the description of the required input files, refer to :ref:`Case Study 1-Input Files<c1IF>`. Moreover, studying Case Study 1 before moving to this case is highly recommended as the options described in Case Study 1 are not explained here.
 
