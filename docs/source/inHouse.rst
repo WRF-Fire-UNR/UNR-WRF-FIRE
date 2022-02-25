@@ -1,6 +1,6 @@
 .. _inHouse:
 
-In-house Python codes
+In-house Python Codes
 ---------------------
 
 .. _python:
