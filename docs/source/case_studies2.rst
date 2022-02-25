@@ -1,3 +1,7 @@
+=============
+Case Study 2
+=============
+
 Case Study 2: Idealized Flat-surface Coupled Model with Idealized Ridge
 -----------------------------------------------------------------------
 
