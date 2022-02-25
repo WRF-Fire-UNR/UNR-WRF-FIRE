@@ -1,10 +1,9 @@
-=============
-Case Study 1
-=============
+
 
 .. _case1:
+====================================================
 Case Study 1: Idealized Flat-surface Uncoupled Model
-----------------------------------------------------
+====================================================
 The first case study presented here is an idealized uncoupled model with flat surface based on the first model presented by Munoz-esparza et al. [1].  The wind field is assumed to be uniform and constant throughout the simulation, and all the atmospheric options are turned off in this case. The main goal of this case is to introduce the very basics of WRF and WRF-Fire, and how to create an idealized model. As an uncoupled model, this case only represents Rothermel’s [2]rate of spread (ROS) theorem.
 
 .. _c1IF:
