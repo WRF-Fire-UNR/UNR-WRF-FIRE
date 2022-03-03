@@ -405,7 +405,7 @@ In this scenario the wind speed is set to 2.5 ms\ :sup:`-1`\  to demonstrate the
   :alt: Alternative text
 .. centered:: 20 min after the ignition
   
-.. image:: images/C340.png
+.. image:: images/C40.png
   :align: center
   :width: 700
   :height: 400
