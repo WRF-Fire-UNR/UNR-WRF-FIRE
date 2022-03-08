@@ -132,15 +132,15 @@ Description of Functions in the Code
 
 Four functions are used in this code: (1) “wrf_out_read”, (2) “relax_zone_remover”, (3) “wind_plot”, and (4) “fire_perimeter_plot”.
 
-**“wrf_out_read” Function**
+**“wrf_out_read”:**
 This function reads WRF-Fire output files using netCDF4 Python library. This function first extracts the hours and minutes of the user-specified output time which is in minutes. Then, it opens WRF-Fire output using “Dataset” function of netCDF 4 library and returns the loaded output file. The name of the WRF-Fire output file must be edited by the user based on its WRF-Fire output names.
 
-**“relax_zone_remover” Function**
+**“relax_zone_remover”:**
 WRF-Fire applies a relaxation zone to the level-set variable at the top and right side of the domain meaning the level-set value at this zone is equal to zero. The size of this relaxation zone is equal to one atmospheric grid cell, i.e., “sr” cells of the fire grid where “sr” is the sub-grid ratio defined by the user. To avoid incorrectly determining this relaxation zone as fire perimeter, where level-set function is equal to zero, this relaxation zone must be removed. “relax_zone_remover” function removes this zone by deleting “sr” columns and rows of the level-set variable at the top and right side of the domain using Numpy library. Furthermore, to match the size of the level-set variable with X and Y, the relaxation zone must be also removed from X and Y matrices.
 
-**“fire_perimeter” Function**
+**“fire_perimeter”:**
 This function plots the fire perimeter using level-set function values and matplotlib contour function. In the first step, the function removes the relaxation zone from level-set, X, and Y variables by calling the “relax_zone_remover” function. In the next step, “fire_perimeter” function plots the fire perimeter using matplotlib contour function followed by a label definition used for creating figure’s legend. In the contour function, the contour level is set to zero since the fire perimeter is where the level-set value is equal to zero.
 
-**“wind_plot” Function**
+**“wind_plot”:**
 This function uses matplotlib’s quiver function to plot arrows indicating wind speed and direction. It starts by first reading the U and V components of the wind speed, and since these variables are 3 dimensional, the height value, which is a user-defined input of the function, is applied to achieve U and V wind components at the desired vertical level. Then, the wind vectors are plotted using matplotlib quiver function. Quiver function options can be modified by the user based on its needs. In this example, wind vectors are plotted with interval of 8 to avoid congesting the resulting figure. Moreover, scale of 8 is applied to make reading the vectors easier. Further description of matplotlib quiver function is available here.
 
