@@ -413,7 +413,7 @@ This model results are purely Rothermel’s ROS theorem as the fire/atmosphere c
   :alt: Alternative text
 .. centered:: 20 min after start of the simulation
 
-.. image:: images/Ends.png
+.. image:: images/update.png
   :align: center
   :width: 600
   :height: 350
