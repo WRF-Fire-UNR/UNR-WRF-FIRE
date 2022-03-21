@@ -17,5 +17,6 @@ begin from the first case study if you are new to WRF-Fire world!
    case_studies1
    case_studies2
    case_studies3
+   case_studies4
    additional
 
