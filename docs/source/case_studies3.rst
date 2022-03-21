@@ -340,48 +340,42 @@ Although the initial wind speed of the first scenario is zero, the figure for 30
 .. image:: images/C31.png
   :align: center
   :width: 600
-  :height: 350  :width: 600
-  :height: 350
+  :height: 350  
   :alt: Alternative text
 .. centered:: Beginning of the ignition (30 min after the start of simulation)
     
 .. image:: images/C32.png
   :align: center
   :width: 600
-  :height: 350  :width: 600
-  :height: 350
+  :height: 350  
   :alt: Alternative text
 .. centered:: 10 min after the ignition
     
 .. image:: images/C33.png
   :align: center
   :width: 600
-  :height: 350  :width: 600
-  :height: 350
+  :height: 350  
   :alt: Alternative text
 .. centered:: 20 min after the ignition
   
 .. image:: images/C34.png
   :align: center
   :width: 600
-  :height: 350  :width: 600
-  :height: 350
+  :height: 350  
   :alt: Alternative text
 .. centered:: 30 min after the ignition
   
 .. image:: images/C35.png
   :align: center
   :width: 600
-  :height: 350  :width: 600
-  :height: 350
+  :height: 350  
   :alt: Alternative text
 .. centered:: 60 min after the ignition
   
 .. image:: images/C36.png
   :align: center
   :width: 600
-  :height: 350  :width: 600
-  :height: 350
+  :height: 350  
   :alt: Alternative text
 .. centered:: 90 min after the ignition (end of the simulation)
   
