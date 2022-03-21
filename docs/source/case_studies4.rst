@@ -315,24 +315,21 @@ Sample outputs of this case study is shown in the below figures. It can be obser
 .. image:: images/10minz.png
   :align: center
   :width: 600
-  :height: 350  :width: 600
-  :height: 350
+  :height: 350 
   :alt: Alternative text
 .. centered:: 10 min after the ignition
 
 .. image:: images/20minz.png
   :align: center
   :width: 600
-  :height: 350  :width: 600
-  :height: 350
+  :height: 350  
   :alt: Alternative text
 .. centered:: 20 min after the ignition
 
 .. image:: images/30minz.png
   :align: center
   :width: 600
-  :height: 350  :width: 600
-  :height: 350
+  :height: 350 
   :alt: Alternative text
 .. centered:: 30 min after the ignition
 
