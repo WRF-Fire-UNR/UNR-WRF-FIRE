@@ -64,7 +64,7 @@ The contributing team from the UCAR includes:
 
    <p style="margin-left:2.5%;">- <a href="https://staff.ucar.edu/users/tjuliano" target="_blank">Timothy Juliano</a>, Project Scientist I, NCAR <br>
 
-For questions and comment about this wiki page, please contact Dr. Hamed Ebrahimian at hebrahimian@unr.edu. 
+For questions and comment about this wiki page, please contact Dr. Hamed Ebrahimian at hebrahimian@unr.edu, or Kasra Shamsaei at kasra.sh@nevada.unr.edu. 
 
 For technical questions about WRF-Fire, please contact Dr. Branko Kosovic at branko@ucar.edu. 
 
