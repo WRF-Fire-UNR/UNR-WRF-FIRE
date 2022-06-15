@@ -51,29 +51,29 @@ The domains setup of this case is as follows.
 ::
 
    &domains
-   time_step			      = 0,
-   time_step_fract_num		= 1,
-   time_step_fract_den		= 2, 			
-   max_dom			         = 2,			
-   s_we				         = 1,		1, 	
-   e_we				         = 151,		801, 	
-   s_sn				         = 1,		1, 	
-   e_sn				         = 151,		401, 	
-   s_vert				      = 1,		1,
-   e_vert				      = 101,		101,
-   dx				            = 100,		12.5,
-   dy				            = 100,		12.5,
-   ztop				         = 2000,	2000,
-   grid_id				      = 1,		2,
-   parent_id			      = 0,		1,
-   i_parent_start			   = 1,		26,	
-   j_parent_start			   = 1,		51, 	
-   parent_grid_ratio		   = 1,		8,
-   parent_time_step_ratio	= 1,		6, 	
-   feedback			         = 0,
-   smooth_option		      = 0,
-   sr_x				         = 1,		1,
-   sr_y				         = 1,		1,
+   time_step               = 0,
+   time_step_fract_num     = 1,
+   time_step_fract_den     = 2, 			
+   max_dom                 = 2,			
+   s_we                    = 1,		1, 	
+   e_we                    = 151,		801, 	
+   s_sn                    = 1,		1, 	
+   e_sn                    = 151,		401, 	
+   s_vert                  = 1,		1,
+   e_vert                  = 101,		101,
+   dx                      = 100,		12.5,
+   dy                      = 100,		12.5,
+   ztop                    = 2000,	2000,
+   grid_id                 = 1,		2,
+   parent_id               = 0,		1,
+   i_parent_start          = 1,		26,	
+   j_parent_start          = 1,		51, 	
+   parent_grid_ratio       = 1,		8,
+   parent_time_step_ratio  = 1,		6, 	
+   feedback                = 0,
+   smooth_option           = 0,
+   sr_x                    = 1,		1,
+   sr_y                    = 1,		1,
    /
    
 Option “max_dom” is set to 2, which is the number of domains in this case. The parent domain (“parent_id” = 0 – meaning the outermost domain) of the model has dimensions of 15 by 15 km (see options “s_we”, “e_we”, “s_sn”, “e_sn”) in X and Y directions with grid size of 100 m (see options “dx” and “dy”). A child domain (“parent_id” = 1, indicating that its parent domain is domain 1) with increased horizontal resolution (12.5 m in both X and Y directions) is nested inside the parent domain (see the figure below for details). The model top is located at 2 km for both the domains (“ztop” option). Options “i_parent_start” and “j_parent_start” specify the starting grid point of the domain within its parent domain. For the child domain these options are set to 26 and 51, respectively. “parent_grid_ratio” is set to 1 for the parent domain and 8 for the child domain, reflecting the specified grid resolutions. The time step of the parent domain is set to 0.5 s (“time_step_fract_num” determines the time step nominator and “time_step_fract_den” determines the time step denominator). “parent_time_step_ratio” controls the time step for the child domain, which is 6 in this case study meaning the ratio of parent to child domains time step is 6. “feedback” option is set to 0, not allowing feedback from nest to its parent domain. “smooth_option” is set to 0 (no smoothing of the data for the parent domain in the area of the nest). The fire grid has the same resolution as the atmospheric grid (see options “sr_x” and “sr_y”).
@@ -94,19 +94,19 @@ For this case study, the physics options are presented below.
 ::
 
    &physics
-   mp_physics			      = 0,		0,
-   ra_lw_physics			   = 0,		0,
-   ra_sw_physics			   = 0,		0,
+   mp_physics              = 0,		0,
+   ra_lw_physics           = 0,		0,
+   ra_sw_physics           = 0,		0,
    sf_sfclay_physics       = 1,		1,
-   sf_surface_physics		= 0,		0,
-   bl_pbl_physics		      = 0,		0,
-   bldt				         = 0,		0,
-   cu_physics			      = 0,		0,
-   cudt				         = 0,		0,
-   isfflx				      = 2,
-   ifsnow				      = 0,
-   icloud				      = 0,
-   mp_zero_out			      = 0,
+   sf_surface_physics      = 0,		0,
+   bl_pbl_physics          = 0,		0,
+   bldt                    = 0,		0,
+   cu_physics              = 0,		0,
+   cudt                    = 0,		0,
+   isfflx                  = 2,
+   ifsnow                  = 0,
+   icloud                  = 0,
+   mp_zero_out             = 0,
    /
    
 “sf_sfclay_physics” option controls the choice of surface layer scheme that calculate friction velocities and exchange coefficients which in turn enable calculation of surface heat and moisture fluxes. “sf_sfclay_physics” is set to 1 representing Revised MM5 Monin-Obukhov surface layer scheme (surface layer scheme based on the fifth-generation Pennsylvania State University–National Center for Atmospheric Research Mesoscale Model (MM5) parameterization).“bl_pbl_physic s” is set to 0 indicating that no PBL scheme is used. This option must be set to 0 to configure the domain in LES mode as explained in Case Study 3. Moreover, the “isfflx” option is set to 2 to make the model use the defined surface heat flux and model-computed friction velocities. This options is an idealized LES scheme which is outlined in Chapter 5 of WRF-ARW’s User’s Guide.
@@ -118,26 +118,26 @@ The dynamics options for this case study can be found below.
 ::
 
    &dynamics
-   hybrid_opt			= 0,
-   rk_ord				= 3,
-   diff_opt			= 2,		2,
-   km_opt			= 2,		2,
-   damp_opt			= 0,
-   c_s				= 0.18,		0.18,
-   c_k				= 0.1,		0.15,
-   tke_heat_flux			= 0.015,	0.015,
-   mix_isotropic			= 1,		1,
-   mix_full_fields		= .true.,
-   non_hydrostatic		= .true.,	.true.,
-   h_mom_adv_order		= 5,		5,
-   v_mom_adv_order		= 3,		3,
-   h_sca_adv_order		= 5,		5,
-   v_sca_adv_order		= 3,		3,
-   time_step_sound		= 10,		10,
-   moist_adv_opt			= 1,		1, 
-   scalar_adv_opt		= 1,		1,
-   tracer_opt			= 3,		3,
-   pert_coriolis			= .true.,	.true.,
+   hybrid_opt              = 0,
+   rk_ord                  = 3,
+   diff_opt                = 2,		2,
+   km_opt                  = 2,		2,
+   damp_opt                = 0,
+   c_s                     = 0.18,		0.18,
+   c_k                     = 0.1,		0.15,
+   tke_heat_flux           = 0.015,	0.015,
+   mix_isotropic           = 1,		1,
+   mix_full_fields         = .true.,
+   non_hydrostatic         = .true.,	.true.,
+   h_mom_adv_order         = 5,		5,
+   v_mom_adv_order         = 3,		3,
+   h_sca_adv_order         = 5,		5,
+   v_sca_adv_order         = 3,		3,
+   time_step_sound         = 10,		10,
+   moist_adv_opt           = 1,		1, 
+   scalar_adv_opt          = 1,		1,
+   tracer_opt              = 3,		3,
+   pert_coriolis           = .true.,	.true.,
    /
    
 In this case, “diff_opt” is set to 2 which indicates full diffusion scheme in all directions of WRF atmospheric model. “km_opt” is set to 2 in this case study which means that the model will use 3D Turbulent Kinetic Energy (TKE) scheme to determine eddy coefficients for the diffusion scheme used (“diff_opt”). Upper-level damping is turned off in the simulation by setting (“damp_opt” = 0). Smagorinsky (“c_s”) and TKE (“c_k”) coefficients are set to 0.18 and 0.1 for the parent domain and 0.1 and 0.15 for the child domain, respectively [3]. The heat flux (“tke_heat_flux”) is set to 0.015 K m s-1. “pert_coriolis” option is turned on to apply the Coriolis term to the wind, which is required for idealized LES simulations. The description of other options used within this section and not explained here can be found in :ref:`Case Study 1<case1>`.
@@ -149,17 +149,17 @@ Selection of the boundary conditions options for this case study are as follows.
 ::
 
    &bdy_control
-   periodic_x			= .true.,	.false.,
-   symmetric_xs			= .false.,	.false.,
-   symmetric_xe			= .false.,	.false.,
-   open_xs			= .false.,	.false.,
-   open_xe			= .false.,	.false.,
-   periodic_y			= .true.,	.false.,
-   symmetric_ys			= .false.,	.false.,
-   symmetric_ye			= .false.,	.false.,
-   open_ys			= .false.,	.false.,
-   open_ye			= .false.,	.false.,
-   nested				= .false.,	.true.,
+   periodic_x           = .true.,	.false.,
+   symmetric_xs         = .false.,	.false.,
+   symmetric_xe         = .false.,	.false.,
+   open_xs              = .false.,	.false.,
+   open_xe              = .false.,	.false.,
+   periodic_y           = .true.,	.false.,
+   symmetric_ys         = .false.,	.false.,
+   symmetric_ye         = .false.,	.false.,
+   open_ys              = .false.,	.false.,
+   open_ye			      = .false.,	.false.,
+   nested               = .false.,	.true.,
    /
    
 The parent domain utilizes periodic boundary condition in both X and Y directions in this model. Nested domains must use “nested” boundary condition option in order to receive their boundary conditions from their respective parent domains. Therefore, option “nested” is set to “.true.” for the child domain and “.false.” for the parent domain.
@@ -169,8 +169,8 @@ The parent domain utilizes periodic boundary condition in both X and Y direction
 ::
 
    &namelist_quilt
-   nio_tasks_per_group = 0,
-   nio_groups = 1,
+   nio_tasks_per_group  = 0,
+   nio_groups           = 1,
    /
    
 Description of this section and options used within can be found in :ref:`Case Study 1<case1>`.
@@ -180,32 +180,32 @@ Description of this section and options used within can be found in :ref:`Case S
 ::
 
    &fire
-   ifire				= 2,		2,   
-   fire_fuel_read			= 0,		0,
-   fire_fuel_cat			= 1,		1,
-   fire_num_ignitions		= 0,		1,
-   fire_ignition_ros1		= 0,		20,  
-   fire_ignition_start_x1		= 0,		2000,
-   fire_ignition_start_y1		= 0,		1000,
-   fire_ignition_end_x1		= 0,		2000,
-   fire_ignition_end_y1		= 0,		4000,
-   fire_ignition_radius1		= 0,		12.5,
-   fire_ignition_start_time1	= 0,		60,
-   fire_ignition_end_time1	= 0,		61,             
-   delt_perturbation		= 0.5,		0.5, 
-   xrad_perturbation		= 15000.0,	10000.0,
-   yrad_perturbation		= 15000.0,	5000.0,
-   zrad_perturbation		= 40.0,		40.0,
-   hght_perturbation		= 40.0,		40.0,
-   stretch_hyp			= .true.,	.true.,
-   z_grd_scale			= 1.09,		1.09,
-   fire_print_msg			= 1,		1,
-   fire_wind_height		= 6.5,		6.5,
-   fire_topo_from_atm		= 1,		1,
-   fire_atm_feedback		= 1.0,		1.0,
-   fire_viscosity			= 0.4,		0.4,
-   fire_upwinding		= 9,		9,
-   fire_boundary_guard		=-1,		-1,
+   ifire                      = 2,		2,   
+   fire_fuel_read             = 0,		0,
+   fire_fuel_cat              = 1,		1,
+   fire_num_ignitions         = 0,		1,
+   fire_ignition_ros1         = 0,		20,  
+   fire_ignition_start_x1     = 0,		2000,
+   fire_ignition_start_y1     = 0,		1000,
+   fire_ignition_end_x1       = 0,		2000,
+   fire_ignition_end_y1       = 0,		4000,
+   fire_ignition_radius1      = 0,		12.5,
+   fire_ignition_start_time1  = 0,		60,
+   fire_ignition_end_time1    = 0,		61,             
+   delt_perturbation          = 0.5,		0.5, 
+   xrad_perturbation          = 15000.0,	10000.0,
+   yrad_perturbation          = 15000.0,	5000.0,
+   zrad_perturbation          = 40.0,		40.0,
+   hght_perturbation          = 40.0,		40.0,
+   stretch_hyp                = .true.,	.true.,
+   z_grd_scale                = 1.09,		1.09,
+   fire_print_msg             = 1,		1,
+   fire_wind_height           = 6.5,		6.5,
+   fire_topo_from_atm         = 1,		1,
+   fire_atm_feedback          = 1.0,		1.0,
+   fire_viscosity             = 0.4,		0.4,
+   fire_upwinding             = 9,		9,
+   fire_boundary_guard        =-1,		-1,
    /
    
 A number of the options used for fire setup are same as Case Study 3 and will not be discussed here. The user is referred to :ref:`Case Study 3<case3>` for these options. Option “ifire” is set to 2 activating WRF-Fire for both the domains, even though the parent domain will not have any ignition in it (“fire_num_ignitions” is set to 0 for the parent domain). It’s because the child domain inherits “static” information from the parent domain in idealized cases, hence requiring the “ifire” to be turned on in the parent domain as well. Fuel type is set to fuel category 1 (short grass), using “fire_fuel_cat” option. Option “fire_num_ignitions” is set to 1 for the child domain resulting in fire start in that domain. The ignition in this case is a 3 km long 12.5 m wide ignition line (“fire_ignition_radius1”). Ignition line dimensions are controlled by “fire_ignition_start_x1”, “fire_ignition_end_x1”, “fire_ignition_start_y1”, and “fire_ignition_end_y1” options. All these options are set with respect to the child domain. “fire_ignition_ros1” is set 20 m s-1 to avoid the ignition issue explained in :ref:`Case Study 1<case1>`. The fire is ignited 1 min after the simulation start time of the child domain (“fire_ignition_start_time1” with respect to the child domain). As a reminder, the child domain starts after 3 hours of simulation of the parent domain allowing the atmospheric model to run prior to ignition. These 3 hours are called “spin-up” time as discussed in :ref:`Case Study 3<case3>`. Temperature perturbation bubble, discussed in :ref:`Case Study 3<case3>`, is defined for both the domains. Bubbles cover the entire domains. The hyperbolic vertical levels distribution is applied to the model (“stretch_hyp” and “z_grd_scale”).
@@ -221,12 +221,12 @@ The namelist.fire of this case defines 13 fuel types based on the Anderson fuel 
 ::
 
    &fuel_scalars                    
-   cmbcnst			= 17.433e+06,
-   hfgl				= 17.e4,
-   fuelmc_g			= 0.08,
-   fuelmc_c			= 1.00,
-   nfuelcats			= 13,
-   no_fuel_cat			= 14
+   cmbcnst           = 17.433e+06,
+   hfgl              = 17.e4,
+   fuelmc_g          = 0.08,
+   fuelmc_c          = 1.00,
+   nfuelcats         = 13,
+   no_fuel_cat       = 14
    /
 
 **&fuel_categories**
