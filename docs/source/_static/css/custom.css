@@ -1,3 +1,8 @@
 .section #basic-2-flip-flop-synchronizer{
      text-align:justify;
 }
+
+/* Center the RTD placement when not wide enough to float */
+#rtd-stickybox-container {
+  text-align: justify;
+}
