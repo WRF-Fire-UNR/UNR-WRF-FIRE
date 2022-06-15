@@ -66,5 +66,3 @@ html_theme_options = {
     "display_version": False,
 }
 
-def setup(app):
-    app.add_stylesheet("css/custom.css")
