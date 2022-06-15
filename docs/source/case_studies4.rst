@@ -81,8 +81,8 @@ Option “max_dom” is set to 2, which is the number of domains in this case. T
 
 .. image:: images/domains.png
   :align: center
-  :width: 600
-  :height: 600
+  :width:  600
+  :height: 500
   :alt: Alternative text
 .. centered:: Domains’ setup
 
