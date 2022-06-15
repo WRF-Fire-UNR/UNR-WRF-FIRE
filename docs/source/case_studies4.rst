@@ -16,14 +16,14 @@ The temporal setup of the model used for this case study is shown below.
 ::
 
    &time_control
-   run_days			         = 0,
-   run_hours			      = 4, 			
-   run_minutes			      = 1,
-   run_seconds			      = 0,
-   start_year			      = 0001, 	0001,
-   start_month			      = 01,		01,
-   start_day			      = 01,		01,
-   start_hour			      = 00,		03,
+   run_days                = 0,
+   run_hours               = 4, 			
+   run_minutes             = 1,
+   run_seconds             = 0,
+   start_year              = 0001, 	0001,
+   start_month             = 01,		01,
+   start_day               = 01,		01,
+   start_hour              = 00,		03,
    start_minute		      = 00,		00,
    start_second		      = 00,		00,
    end_year			         = 0001,	0001,
