@@ -82,7 +82,7 @@ Option “max_dom” is set to 2, which is the number of domains in this case. T
 .. image:: images/domains.png
   :align: center
   :width: 600
-  :height: 350
+  :height: 600
   :alt: Alternative text
 .. centered:: Domains’ setup
 
@@ -311,7 +311,8 @@ Content of “input_sounding” file is presented below. Note that the initial t
 
 Sample Output
 ^^^^^^^^^^^^^
-Sample outputs of this case study is shown in the below figures. It can be observed that the fire propagates with a non-uniform and nonsymmetric perimeter. The shape of the fire is due to simulation in LESA mode which results in the turbulence development in the domain, same as :ref:`Case Study 3<case3>`. As in that case study, the wind behind the fire head is along the fire spread direction and the wind at the front of the fire head is toward the fire head, which is due to vertical updraft generated from the fire. The vertical updraft of the fire head sucks air into the base of the fire resulting in the observed wind patter in the domain. This phenomenon is captured by the fully coupled fire-atmosphere behavior of WRF-Fire, which is an important characteristic of WRF-Fire resulting in more realistic simulation of fire propagation process. Furthermore, it can be observed that the fire propagates in a fast rate being able to reach the end of nested domain 30 min after the ignition. This can be attributed to the fact that a strong constant wind in X direction is applied. 
+Sample outputs of this case study is shown in the below figures. It can be observed that the fire propagates with a non-uniform and nonsymmetric perimeter. The shape of the fire is due to simulation in LESA mode which results in the turbulence development in the domain, same as :ref:`Case Study 3<case3>`. As in that case study, the wind behind the fire head is along the fire spread direction and the wind at the front of the fire head is toward the fire head, which is due to vertical updraft generated from the fire. The vertical updraft of the fire head sucks air into the base of the fire resulting in the observed wind patter in the domain. This phenomenon is captured by the fully coupled fire-atmosphere behavior of WRF-Fire, which is an important characteristic of WRF-Fire resulting in more realistic simulation of fire propagation process. Furthermore, it can be observed that the fire propagates in a fast rate being able to reach the end of nested domain 30 min after the ignition. This can be attributed to the fact that a strong constant wind in X direction is applied.
+
 .. image:: images/10minz.png
   :align: center
   :width: 600
