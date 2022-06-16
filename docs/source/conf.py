@@ -57,7 +57,7 @@ html_static_path = ['_static']
 # These paths are either relative to html_static_path
 # or fully qualified paths (eg. https://...)
 html_css_files = [
-    'css/custom.css',
+    'https://github.com/WRF-Fire-UNR/UNR-WRF-FIRE/blob/main/docs/source/_static/css/custom.css',
 ]
 
 html_logo = "images/logo.png"
