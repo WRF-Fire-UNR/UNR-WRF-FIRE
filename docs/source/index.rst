@@ -33,23 +33,17 @@ About Us
 This Wiki has been developed through collaboration between teams from the University of Nevada, Reno and University Corporation for Atmospheric Research (UCAR). The development of this wiki page has been sponsored by the `NSF LEAP-HI Grant #1953333 <https://www.nsf.gov/awardsearch/showAward?AWD_ID=1953333&HistoricalAwards=false>`_ and UCAR funding.
 
 The contributing team from the University of Nevada, Reno includes:
-   
    *  `Hamed Ebrahimian <https://www.unr.edu/cee/people/hamed-ebrahimian>`_, Assistant Professor
    * Kasra Shamsaei, Ph.D. Student
    * Honggang Wang, Postdoctoral Fellow
-   * Evan Chinn, B.Sc. Student<br>
+   * Evan Chinn, B.Sc. Student
 
 To read more about our project and progress, `visit here <https://packpages.unr.edu/wildfireproject>`_.
 
 The contributing team from the UCAR includes:
 
-.. raw:: html
-
-   <p style="margin-left:2.5%;">- <a href="https://staff.ucar.edu/users/branko" target="_blank">Branko Kosovic</a>, Director of the Weather Systems and Assessment Program, NCAR <br>
-
-.. raw:: html
-
-   <p style="margin-left:2.5%;">- <a href="https://staff.ucar.edu/users/tjuliano" target="_blank">Timothy Juliano</a>, Project Scientist I, NCAR <br>
+* `Branko Kosovic<https://staff.ucar.edu/users/branko>`_, Director of the Weather Systems and Assessment Program, NCAR
+* `Timothy Juliano<https://staff.ucar.edu/users/tjuliano>`_, Project Scientist I, NCAR
 
 For questions and comment about this wiki page, please contact Dr. Hamed Ebrahimian at hebrahimian@unr.edu, or Kasra Shamsaei at kasra.sh@nevada.unr.edu. 
 
