@@ -34,20 +34,12 @@ This Wiki has been developed through collaboration between teams from the Univer
 
 The contributing team from the University of Nevada, Reno includes:
    
-   *  _Hamed Ebrahimian <https://www.unr.edu/cee/people/hamed-ebrahimian>__, Assistant Professor
-   * Kasra Shamsaei, Ph.D. Student <br>
+   *  `Hamed Ebrahimian <https://www.unr.edu/cee/people/hamed-ebrahimian>`_, Assistant Professor
+   * Kasra Shamsaei, Ph.D. Student
+   * Honggang Wang, Postdoctoral Fellow
+   * Evan Chinn, B.Sc. Student<br>
 
-.. raw:: html
-
-   <p style="margin-left:2.5%;">- Honggang Wang, Postdoctoral Fellow <br>
-
-.. raw:: html
-
-   <p style="margin-left:2.5%;">- Evan Chinn, B.Sc. Student<br>
-
-.. raw:: html
-
-   <p style="margin-left:0%;">To read more about our project and progress, <a href="https://packpages.unr.edu/wildfireproject" target="_blank">visit here</a>.
+To read more about our project and progress, `visit here <https://packpages.unr.edu/wildfireproject>`_.
 
 The contributing team from the UCAR includes:
 
