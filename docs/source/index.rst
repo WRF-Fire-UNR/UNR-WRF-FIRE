@@ -44,8 +44,8 @@ This Wiki has been developed through collaboration between teams from the Univer
 
 The contributing team from the University of Nevada, Reno includes:
 
-   *  `Hamed Ebrahimian <https://www.unr.edu/cee/people/hamed-ebrahimian>`_, Assistant Professor
-   * Kasra Shamsaei, Ph.D. Student
+   * `Hamed Ebrahimian <https://www.unr.edu/cee/people/hamed-ebrahimian>`_, Assistant Professor
+   * `Kasra Shamsaei <https://www.linkedin.com/in/shamsaei/>`_, Ph.D. Student
    * Honggang Wang, Postdoctoral Fellow
    * Evan Chinn, B.Sc. Student
 
