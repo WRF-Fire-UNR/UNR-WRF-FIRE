@@ -33,6 +33,7 @@ About Us
 This Wiki has been developed through collaboration between teams from the University of Nevada, Reno and University Corporation for Atmospheric Research (UCAR). The development of this wiki page has been sponsored by the `NSF LEAP-HI Grant #1953333 <https://www.nsf.gov/awardsearch/showAward?AWD_ID=1953333&HistoricalAwards=false>`_ and UCAR funding.
 
 The contributing team from the University of Nevada, Reno includes:
+
    *  `Hamed Ebrahimian <https://www.unr.edu/cee/people/hamed-ebrahimian>`_, Assistant Professor
    * Kasra Shamsaei, Ph.D. Student
    * Honggang Wang, Postdoctoral Fellow
