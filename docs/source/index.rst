@@ -28,6 +28,16 @@ This Wiki aims to tutor WRF-Fire using a variety of examples with incrementally 
 
 Enjoy learning WRF-Fire!
 
+How to Cite this Wiki?
+----------------------
+We would like to ask to cite this Wiki using the following citation:
+
+.. code-block:: none
+
+   Shamsaei, K. et al. (2022). WRF-Fire Wikipage. https://unr-wrf-fire.rtfd.io
+    
+.. note:: 
+
 About Us 
 --------
 This Wiki has been developed through collaboration between teams from the University of Nevada, Reno and University Corporation for Atmospheric Research (UCAR). The development of this wiki page has been sponsored by the `NSF LEAP-HI Grant #1953333 <https://www.nsf.gov/awardsearch/showAward?AWD_ID=1953333&HistoricalAwards=false>`_ and UCAR funding.
