@@ -34,7 +34,7 @@ We would like to ask to cite this Wiki using the following citation:
 
 .. code-block:: none
 
-   Shamsaei, K. et al. (2022). WRF-Fire Wikipage. https://unr-wrf-fire.rtfd.io
+   Shamsaei, K. et al. (2022). WRF-Fire Wikipage, https://unr-wrf-fire.rtfd.io
     
 .. note:: 
 
