@@ -26,17 +26,7 @@ This Wiki aims to tutor WRF-Fire using a variety of examples with incrementally 
  * :ref:`Step 3:<Ncview>` Visualize the outputs of test cases using Ncview.
  * :ref:`Step 4:<tutorials>` After getting acquainted with WRF-Fire, follow the examples and commands tutorials to learn how to create different WRF-Fire models. You can also follow visualization tutorials for more visualization tools and options.
 
-Enjoy learning WRF-Fire!
-
-How to Cite this Wiki?
-----------------------
-We would like to ask to cite this Wiki using the following citation:
-
-.. code-block:: none
-
-   Shamsaei, K. et al. (2022). WRF-Fire Wikipage, https://unr-wrf-fire.rtfd.io
-    
-.. note:: 
+Enjoy learning WRF-Fire! 
 
 About Us 
 --------
@@ -46,7 +36,7 @@ The contributing team from the University of Nevada, Reno includes:
 
    * `Hamed Ebrahimian <https://www.unr.edu/cee/people/hamed-ebrahimian>`_, Assistant Professor
    * `Kasra Shamsaei <https://www.linkedin.com/in/shamsaei/>`_, Ph.D. Student
-   * Honggang Wang, Postdoctoral Fellow
+   * `Nataliia Igrashkina <https://www.linkedin.com/in/nataliia-igrashkina-87145598/>`_, Ph.D. Student
    * Evan Chinn, B.Sc. Student
 
 To read more about our project and progress, `visit here <https://packpages.unr.edu/wildfireproject>`_.
@@ -58,7 +48,17 @@ The contributing team from the UCAR includes:
 
 For questions and comment about this wiki page, please contact Dr. Hamed Ebrahimian at hebrahimian@unr.edu, or Kasra Shamsaei at kasra.sh@nevada.unr.edu. 
 
-For technical questions about WRF-Fire, please contact Dr. Branko Kosovic at branko@ucar.edu. 
+For technical questions about WRF-Fire, please contact Dr. Branko Kosovic at branko@ucar.edu.
+
+How to Cite this Wiki?
+----------------------
+Please cite this work as:
+
+.. code-block:: none
+
+   Shamsaei, K. et al. (2022). WRF-Fire Wikipage, https://unr-wrf-fire.rtfd.io
+    
+.. note::
 
 .. note::
 
