@@ -53,8 +53,8 @@ To read more about our project and progress, `visit here <https://packpages.unr.
 
 The contributing team from the UCAR includes:
 
-   * `Branko Kosovic<https://staff.ucar.edu/users/branko>`_, Director of the Weather Systems and Assessment Program, NCAR
-   * `Timothy Juliano<https://staff.ucar.edu/users/tjuliano>`_, Project Scientist I, NCAR
+   * `Branko Kosovic <https://staff.ucar.edu/users/branko>`_, Director of the Weather Systems and Assessment Program, NCAR
+   * `Timothy Juliano <https://staff.ucar.edu/users/tjuliano>`_, Project Scientist I, NCAR
 
 For questions and comment about this wiki page, please contact Dr. Hamed Ebrahimian at hebrahimian@unr.edu, or Kasra Shamsaei at kasra.sh@nevada.unr.edu. 
 
