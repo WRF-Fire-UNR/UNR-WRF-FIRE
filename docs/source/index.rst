@@ -32,19 +32,17 @@ About Us
 --------
 This Wiki has been developed through collaboration between teams from the University of Nevada, Reno and University Corporation for Atmospheric Research (UCAR). The development of this wiki page has been sponsored by the `NSF LEAP-HI Grant #1953333 <https://www.nsf.gov/awardsearch/showAward?AWD_ID=1953333&HistoricalAwards=false>`_ and UCAR funding.
 
-The contributing team from the University of Nevada, Reno includes:
+The development team includes:
 
-   * `Hamed Ebrahimian <https://www.unr.edu/cee/people/hamed-ebrahimian>`_, Assistant Professor
-   * `Kasra Shamsaei <https://www.linkedin.com/in/shamsaei/>`_, Ph.D. Student
-   * `Nataliia Igrashkina <https://www.linkedin.com/in/nataliia-igrashkina-87145598/>`_, Ph.D. Student
-   * Evan Chinn, B.Sc. Student
+   * `Hamed Ebrahimian <https://www.unr.edu/cee/people/hamed-ebrahimian>`_, Assistant Professor, University of Nevada, Reno
+   * `Kasra Shamsaei <https://www.linkedin.com/in/shamsaei/>`_, Ph.D. Student, University of Nevada, Reno
+   * `Timothy Juliano <https://staff.ucar.edu/users/tjuliano>`_, Project Scientist I, NCAR
+   * `Nataliia Igrashkina <https://www.linkedin.com/in/nataliia-igrashkina-87145598/>`_, Ph.D. Student, University of Nevada, Reno
+   * Evan Chinn, B.Sc. Student, University of Nevada, Reno
+   * `Branko Kosovic <https://staff.ucar.edu/users/branko>`_, Director of the Weather Systems and Assessment Program, NCAR
+   * `Ertugrul Taciroglu <https://samueli.ucla.edu/people/ertugrul-taciroglu/>`_, Professor, University of California, Los Angeles (UCLA)
 
 To read more about our project and progress, `visit here <https://packpages.unr.edu/wildfireproject>`_.
-
-The contributing team from the UCAR includes:
-
-   * `Branko Kosovic <https://staff.ucar.edu/users/branko>`_, Director of the Weather Systems and Assessment Program, NCAR
-   * `Timothy Juliano <https://staff.ucar.edu/users/tjuliano>`_, Project Scientist I, NCAR
 
 For questions and comment about this wiki page, please contact Dr. Hamed Ebrahimian at hebrahimian@unr.edu, or Kasra Shamsaei at kasra.sh@nevada.unr.edu. 
 
@@ -56,7 +54,7 @@ Please cite this work as:
 
 .. code-block:: none
 
-   Shamsaei, K., Juliano, T., Igrashkina, N., Ebrahimian, H., Kosovic, B. WRF-Fire Wikipage, https://unr-wrf-fire.rtfd.io [access date]
+   Shamsaei, K., Juliano, T., Igrashkina, N., Ebrahimian, H., Kosovic, B., Taciroglu, E. WRF-Fire Wikipage, https://unr-wrf-fire.rtfd.io [access date]
     
 .. note::
 
