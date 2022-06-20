@@ -56,9 +56,11 @@ Please cite this work as:
 
 .. code-block:: none
 
-   Shamsaei, K. et al. (2022). WRF-Fire Wikipage, https://unr-wrf-fire.rtfd.io
+   Shamsaei, K., Juliano, T., Igrashkina, N., Ebrahimian, H., Kosovic, B. WRF-Fire Wikipage, https://unr-wrf-fire.rtfd.io [access date]
     
 .. note::
+
+Please modify the above [access date] to the you accessed this Wiki.
 
 .. note::
 
