@@ -60,7 +60,7 @@ Please cite this work as:
     
 .. note::
 
-Please modify the above [access date] to the you accessed this Wiki.
+Please modify the above [access date] to the date you accessed this Wiki.
 
 .. note::
 
